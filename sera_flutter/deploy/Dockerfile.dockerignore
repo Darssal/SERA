@@ -1,0 +1,14 @@
+# Send only application source, dependency declarations and the public Web build.
+# Runtime databases, mail, keys, models, SDKs and virtualenvs never enter an image.
+**
+!backend/
+!backend/*.py
+!backend/requirements.txt
+!backend/requirements.lock.txt
+!build/
+!build/web/
+!build/web/**
+!deploy/
+!deploy/Dockerfile
+!web/
+!web/generate_offline_manifest.py

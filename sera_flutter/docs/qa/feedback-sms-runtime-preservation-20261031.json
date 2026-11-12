@@ -1,0 +1,14 @@
+{
+  "method": "Fresh SQLite backup before SMS configuration reload; compared all original business rows and columns and heartbeat stable fields",
+  "backupCreated": true,
+  "originalTablesChecked": 16,
+  "originalBusinessTablesChecked": 15,
+  "originalBusinessRowsAndColumnsPreserved": true,
+  "heartbeatRowsAndStableFieldsPreserved": true,
+  "expectedVolatileColumn": "service_heartbeats.updated_at; live worker heartbeat",
+  "integrityCheckPassed": true,
+  "foreignKeyCheckPassed": true,
+  "phoneSchemaPresent": true,
+  "schemaVersion": 2,
+  "status": "passed"
+}

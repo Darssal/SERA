@@ -1,0 +1,190 @@
+{
+  "version": "2.0.5+7",
+  "date": "2026-10-31",
+  "status": "validated",
+  "scope": "Daily budget consent, day agenda, useful week titles, persistent todos, in-place home toggle and concise task detail",
+  "flutter": {
+    "fullPassed": 623,
+    "skipped": 1,
+    "finalHomePassed": 10,
+    "analyzerDiagnostics": 0
+  },
+  "backend": {
+    "testsRun": 323,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "successful": true,
+    "seconds": 52.453,
+    "blockedAccessAttempts": [
+      {
+        "event": "socket.connect",
+        "host": "127.0.0.1",
+        "port": 8790
+      }
+    ]
+  },
+  "browser": {
+    "fallback": "Browser plugin not available",
+    "environment": "Production Flutter widgets; isolated memory store and model fixture; no live API",
+    "checks": [
+      {
+        "name": "home switch changes only the list; ongoing todo included; future start excluded; checkbox completes in place",
+        "passed": true
+      },
+      {
+        "name": "multiple checkmarks persist independently; complete and restore remain on detail; one back returns selected home list",
+        "passed": true
+      },
+      {
+        "name": "lightweight todo creates checklist without goal, deadline, calendar placeholder or AI request and returns to todo list",
+        "passed": true
+      },
+      {
+        "name": "day view lists all-day/midnight/late items compactly and each opens the original entry",
+        "passed": true
+      },
+      {
+        "name": "week single item shows meaningful title; actual crowded overlap opens a choice list",
+        "passed": true
+      },
+      {
+        "name": "one model result -> concise budget consent -> plan review -> explicit commit; preference stays 15 and no repeat model request",
+        "passed": true
+      },
+      {
+        "name": "responsive home and week",
+        "width": 320,
+        "passed": true
+      },
+      {
+        "name": "responsive home and week",
+        "width": 430,
+        "passed": true
+      },
+      {
+        "name": "responsive home and week",
+        "width": 1280,
+        "passed": true
+      }
+    ],
+    "errors": [],
+    "blocked": [],
+    "passed": true
+  },
+  "productionWeb": {
+    "browserFallbackReason": "Browser plugin not available",
+    "base": "http://127.0.0.1:8787",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "httpErrors": [
+      {
+        "status": 401,
+        "path": "/api/v1/auth/me"
+      }
+    ],
+    "blocked": [],
+    "checks": [
+      {
+        "name": "real served release, desktop login, meaningful content, no offline overlay",
+        "passed": true,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      {
+        "name": "email login -> phone login renders actual form without submitting credentials or SMS",
+        "passed": true,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "version": {
+      "app_name": "sera_flutter",
+      "version": "2.0.5",
+      "build_number": "7",
+      "package_name": "sera_flutter"
+    },
+    "servedJsSha256": "c28f4173b1d48944a06d0d912ecfe2cf24c3ba6b340ee87a8d8c79e30678fd61",
+    "expectedSignedOutResponses": [
+      {
+        "status": 401,
+        "path": "/api/v1/auth/me"
+      }
+    ],
+    "unexpectedConsoleErrors": [],
+    "passed": true
+  },
+  "schemaVersion": 2,
+  "artifacts": {
+    "apk": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-2.0.5+7-20261031.apk",
+      "bytes": 77231568,
+      "sha256": "62ecf4f546f4ba824792e9945aa753d8c6803f829e4adebb447cedce32533678"
+    },
+    "aab": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-2.0.5+7-20261031.aab",
+      "bytes": 74417244,
+      "sha256": "ee68aa5a8fac933181d77de3d9a5f8e1a2e88e1c664637e3a0c5672aeb1bfa1b"
+    },
+    "screenshots": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-2.0.5+7-UI-Key-Pages.zip",
+      "bytes": 1116445,
+      "sha256": "e2a0ac172f20c237059e6f9c6d2b37ec4fea95ce9f57331c560bc0bdeacd63c5"
+    },
+    "webJavaScript": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\web\\main.dart.js",
+      "bytes": 5537724,
+      "sha256": "c28f4173b1d48944a06d0d912ecfe2cf24c3ba6b340ee87a8d8c79e30678fd61"
+    },
+    "webCacheManifest": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\web\\sera-cache-manifest.json",
+      "bytes": 11644,
+      "sha256": "a6d029d90b4e578e5860824eb2593de574946bd9337666abe35a9908d6131005"
+    }
+  },
+  "runtimeReload": {
+    "passed": true,
+    "schemaVersion": 2,
+    "originalDataRetained": true,
+    "health": {
+      "status": "ready",
+      "schemaVersion": 2,
+      "components": {
+        "database": {
+          "status": "ok"
+        },
+        "worker": {
+          "status": "ok",
+          "heartbeatAgeSeconds": 2
+        },
+        "asr": {
+          "status": "ok",
+          "model": "sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16",
+          "loadSeconds": 0.5752682000165805
+        },
+        "mail": {
+          "status": "ok",
+          "mode": "smtp",
+          "check": "configuration_only; external delivery requires send verification"
+        },
+        "ai": {
+          "status": "ok"
+        }
+      }
+    },
+    "privateEvidenceDirectory": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\.local\\todo-runtime-20261031"
+  },
+  "limitations": [
+    "No new physical Android device test",
+    "Android retains local backend connection and original release certificate",
+    "No live SMS, email or model calls in this round",
+    "Recurring habits and automatic daily check reset are not implemented; todos persist until explicitly completed",
+    "No new performance measurements",
+    "Existing public lookup factual-source quality limitations remain outside this UI change"
+  ]
+}

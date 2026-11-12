@@ -1,0 +1,57 @@
+{
+  "startedAt": "2026-10-31T05:10:51.494Z",
+  "status": "passed",
+  "origin": "http://127.0.0.1:8787",
+  "method": "Fresh isolated Chrome/Playwright context; production UI read-only; Browser plugin unavailable",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": {
+    "freshAnonymousLoginPage": true,
+    "phoneRouteAndEnabledState": true,
+    "disabledNoticeAbsent": true,
+    "phoneInputEnabledAndEmpty": true,
+    "registrationConsentEnabledAndUnchecked": true,
+    "verificationDisabledBeforeChallenge": true,
+    "noWriteOrSendAttempt": true
+  },
+  "blockedWrites": [],
+  "phonePostAttemptCount": 0,
+  "accountCreationAttemptCount": 0,
+  "aiWriteAttemptCount": 0,
+  "console": {
+    "errors": 1,
+    "warnings": 0,
+    "pageErrors": 0
+  },
+  "httpErrors": [
+    {
+      "path": "/api/v1/auth/me",
+      "status": 401
+    }
+  ],
+  "limits": [
+    "No real SMS send or OTP validation is performed by this UI inspection",
+    "OTP input appears only after a real challenge; this pre-challenge state must not claim OTP input usability was exercised",
+    "The empty-number send button is enabled by current design; source validates the number before requesting a challenge, but that action is not clicked"
+  ],
+  "browserVersion": "156.0.8078.74",
+  "serviceWorkerGuard": "Normal new-context shell allowed. web/sera-sw.js:125 does not intercept API or non-GET requests; all non-read page requests remain blocked by context.route.",
+  "capabilities": {
+    "enabled": true,
+    "httpStatus": 200,
+    "observedFromActualUiRequest": true
+  },
+  "emptyPhoneSendButtonEnabled": true,
+  "otpInputNotExercised": true,
+  "sourceValidationOrder": {
+    "file": "lib/ui/screens/phone_auth_screen.dart",
+    "validationLine": 264,
+    "networkRequestLine": 286,
+    "otpFieldConditionalLine": 486,
+    "sendButtonEnablementLine": 484
+  },
+  "screenshot": "docs/qa/feedback-ui/web-sms-enabled-final.png",
+  "completedAt": "2026-10-31T05:10:55.233Z"
+}

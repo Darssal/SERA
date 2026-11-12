@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-30T19:51:44.123Z",
+  "environment": {
+    "browser": "Google Chrome 156",
+    "driver": "Playwright 1.62.1 (regular Playwright; Browser plugin unavailable)",
+    "origin": "http://127.0.0.1:8788",
+    "mobileViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "desktopViewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "serverAsr": "sherpa-onnx streaming bilingual model via real WebSocket",
+    "privacy": "No cookies, bearer tokens, passwords, provider keys or WebSocket ticket values are included."
+  },
+  "paidAi": {
+    "uniqueGenerationRequests": 1,
+    "source": "siliconflow",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "generatedTaskCount": 4,
+    "generatedMinutes": 100,
+    "goalTitle": "Flutter课程视频演示 · 独立Chrome验收",
+    "deadlineUtc": "2026-11-13T07:00:00.000Z",
+    "noSecondGeneration": true
+  },
+  "runs": [
+    {
+      "bundleSha256": "d3ced6706ddb437bed640f684ffcdcea43b6a1d8e9b944cc20d1b80f3392de12",
+      "purpose": "真实AI、草案、任务执行、回顾和流式语音完整流程",
+      "status": "passed",
+      "checks": {
+        "homeComposerInitiallyEmpty": true,
+        "formalGoalCount": 1,
+        "formalTaskCount": 4,
+        "scheduledBlockCount": 4,
+        "draftTaskTitleEdited": "编写讲解脚本（已核对完成标准）",
+        "businessApiMatchesUi": true,
+        "taskDetailSurvivesRefresh": true,
+        "focus": {
+          "seconds": 3,
+          "pausedSeconds": 1,
+          "stoppedSessionCleared": true,
+          "completedTask": true
+        },
+        "reviewSavedToApi": true,
+        "reviewSurvivesRefresh": true,
+        "realtimeVoice": {
+          "audioSource": "官方test_wavs/0.wav 经Chrome固定音频模拟麦克风；非真人自然语音，不作识别准确率基准。",
+          "actualAudioWorkletPcm": true,
+          "partialCount": 11,
+          "finalCount": 1,
+          "binaryFrames": 113,
+          "binaryBytes": 361600,
+          "finishFrames": 1,
+          "cancelFrames": 1,
+          "socketsClosed": true,
+          "tracksAfterFinish": [
+            "ended"
+          ],
+          "tracksAfterCancel": [
+            "ended",
+            "ended"
+          ],
+          "editedTextContinuesToGoal": true,
+          "noFormalTaskCreated": true
+        }
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "screenshots": [
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-01-home-empty.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-02-goal-confirmation.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-03-real-generation.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-04-draft.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-resume-04-draft.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-resume-05-before-commit.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-resume-06-created.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-resume-07-calendar.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-resume-08-task-detail.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-resume-09-refreshed-detail.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-plan-resume-10-desktop-detail.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-execute-01-focus-paused.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-execute-02-focus-result.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-execute-03-task-completed.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-execute-04-review-saved.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-execute-05-review-refresh-before-assert.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-execute-05-review-refreshed.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-voice-01-real-partial.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-voice-02-real-final.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-voice-03-confirmed-text-before-assert.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-voice-03-confirmed-text-to-goal.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-voice-04-cancel-returned-home.png"
+      ],
+      "driverCorrectionsApplied": true
+    },
+    {
+      "bundleSha256": "b0106e8c34b788458b3ef63458c218ba37da485b08d2b4472cf759b8d34a1d07",
+      "purpose": "UTC与Web麦克风权限拒绝顺序修复回归",
+      "status": "passed",
+      "checks": {
+        "microphonePermission": "denied",
+        "denialMessage": "Error: Permission denied",
+        "permissionFailureRendered": true,
+        "deniedPermissionTextFallback": true,
+        "pcmFrames": 0,
+        "finishFrames": 0,
+        "cancelFrames": 1,
+        "noFormalTaskCreatedByVoice": true,
+        "originalTimeZone": "Asia/Hong_Kong",
+        "utcSavedToApi": true,
+        "utcRefreshed": true,
+        "utcCalendarLoaded": true,
+        "utcTaskDetailLoaded": true,
+        "hkRestoredAfterReload": true
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "screenshots": [
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-deny-01-real-permission-denial.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-deny-02-text-fallback-before-tap.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-deny-02-text-fallback.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-utc-prefs-before-UTC.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-utc-prefs-dropdown-UTC.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-utc-utc-refreshed-prefs.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-utc-utc-calendar.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-utc-utc-task-detail.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-utc-prefs-before-Asia-Hong_Kong.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-utc-prefs-dropdown-Asia-Hong_Kong.png",
+        "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-utc-hk-restored.png"
+      ]
+    }
+  ],
+  "driverNotes": [
+    "初次草案定位因Flutter合并语义标签失败，改用页面可见编辑按钮；从相同已持久化草案继续，未再生成AI。",
+    "保存草案成功提示短暂覆盖底部按钮，等待提示结束再继续实际点击。",
+    "保存回顾会返回今日；修正测试跳转，重新进入回顾并刷新后验证已保存文字。",
+    "Flutter未聚焦原生语义input的DOM value可为空；聚焦后核对真实输入值。",
+    "时区下拉的标签被Flutter语义合并，按已检查截图点击实际菜单项，并用API和刷新确认保存结果。"
+  ],
+  "limits": [
+    "本记录不替代所有55页四种宽度布局测试、Android实体模拟器测试或关闭页面Push测试；其他测试由对应记录覆盖。",
+    "旧SHA权限拒绝曾误报空语音；候选b0106已验证0PCM/0finish与真实权限原因。",
+    "b0106仍为英文Permission denied；最终d75a6构建已复验中文权限提示，0PCM/0finish；首次注册引导由独立账号/设备测试覆盖。"
+  ],
+  "finalBuildSmoke": {
+    "status": "passed",
+    "bundleSha256": "d75a6c2971b1b0fb2104b8fb7aad0e8a141d74ec48b0158eb256aa304694854f",
+    "completedAt": "2026-10-30T19:51:44.122Z",
+    "scope": "最终构建只读首页与既有AI任务详情，中文麦克风拒绝；未重跑付费AI、未修改正式任务或偏好。",
+    "checks": {
+      "pageIdentity": {
+        "url": "http://127.0.0.1:8788/#/04",
+        "title": "SERA · 序日"
+      },
+      "nonBlank": true,
+      "currentTimeZone": "Asia/Hong_Kong",
+      "existingRealAiTaskPersisted": true,
+      "existingTaskStatus": "done",
+      "actualFocusSeconds": 3,
+      "taskDetailSmoke": true,
+      "microphonePermission": "denied",
+      "permissionFailureRendered": true,
+      "denialMessage": "Error: 麦克风权限未开启，请在浏览器网站设置中允许，或改用文字输入。",
+      "pcmFrames": 0,
+      "finishFrames": 0,
+      "cancelFrames": 1,
+      "noFormalTaskCreatedByVoice": true
+    },
+    "pageErrors": [],
+    "consoleErrors": [],
+    "screenshots": [
+      "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-inspect-ready.png",
+      "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-inspect-final-existing-task-detail.png",
+      "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\30\\01a18d8a-b2da-7b10-9c57-137dafe2ed49\\sera-v2-independent-deny-message-01-real-permission-denial.png"
+    ]
+  },
+  "evidenceSummary": {
+    "uniqueScreenshots": 36,
+    "paidGenerationRequests": 1
+  },
+  "subsequentServerModelCorrection": {
+    "configuration": "encoder.int8 + decoder.float + joiner.int8",
+    "clientBundleUnchanged": true,
+    "scope": "These browser capture/release/UI records were observed before the server decoder correction. After correction, real model WebSocket integration, fixed corpus and realtime latency were re-executed; see asr-fixed-corpus.json/asr-realtime-latency.json. No new human-microphone accuracy claim."
+  }
+}

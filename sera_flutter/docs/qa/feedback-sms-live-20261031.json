@@ -1,0 +1,38 @@
+{
+  "status": "verified",
+  "beforeActivation": {
+    "sendCloudRequests": 1,
+    "checkCloudRequests": 0,
+    "providerCode": "OFFER_NOT_ORDER_STATUS",
+    "smsSubmitted": false
+  },
+  "afterActivation": {
+    "sendCloudRequests": 1,
+    "checkCloudRequests": 1,
+    "sendProviderCode": "OK",
+    "sendProviderAccepted": true,
+    "sendCorrelationMatched": true,
+    "smsSubmitted": true,
+    "checkProviderCode": "OK",
+    "checkProviderResult": "PASS",
+    "checkCorrelationMatched": true,
+    "otpVerified": true,
+    "accountSessionValidated": true,
+    "replayBlocked": true,
+    "replayProviderReached": false,
+    "manualAttempts": 1,
+    "productionDataTouched": false
+  },
+  "totals": {
+    "sendCloudRequests": 2,
+    "checkCloudRequests": 1,
+    "acceptedSms": 1
+  },
+  "automaticRetry": false,
+  "receiptEvidence": "Human received and entered the OTP; provider check returned PASS. No separate carrier delivery-receipt query.",
+  "accountEvidence": "Isolated temporary account/session; production phone account was not created",
+  "currentAccessScope": "Only the single explicitly authorized test phone is allowlisted; not open to all users",
+  "additionalSendRequestsForRuntimeReloadOrUiCheck": 0,
+  "sourceCodeChanged": false,
+  "verificationCompletedAt": "2026-10-31T05:03:49.024804+00:00"
+}

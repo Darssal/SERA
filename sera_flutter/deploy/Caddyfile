@@ -1,0 +1,17 @@
+{$SERA_SITE_ADDRESS::80} {
+    request_body {
+        max_size 11MB
+    }
+    handle /asr/ws {
+        rewrite * /ws
+        reverse_proxy asr:8790
+    }
+    handle {
+        reverse_proxy api:8787
+    }
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy same-origin
+        -Server
+    }
+}

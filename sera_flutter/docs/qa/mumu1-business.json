@@ -1,0 +1,32 @@
+{
+  "recordedDate": "2026-10-31",
+  "device": "127.0.0.1:16416",
+  "deviceName": "MuMu 安卓设备-1",
+  "androidApi": 32,
+  "test": "integration_test/business_device_test.dart",
+  "command": "flutter test integration_test/business_device_test.dart -d 127.0.0.1:16416 --no-pub --reporter expanded --dart-define=API_BASE_URL=http://127.0.0.1:8787",
+  "status": "passed",
+  "testCasesPassed": 1,
+  "testDurationSecondsReported": 17,
+  "api": "http://127.0.0.1:8787",
+  "dataIsolation": "A uniquely generated QA account was created through the production UI. An independent native Bearer session inspected actual server state. No existing account was deleted or its workspace reset.",
+  "checks": [
+    "Production SeraRoot restores authentication and displays login",
+    "UI registration opens first-use preferences and calendar setup",
+    "First-use completion is persisted in the server workspace",
+    "UI creates a five-minute inbox task without silently scheduling a time block",
+    "Starting focus persists a running session for that exact task ID",
+    "Pausing persists elapsed seconds; paused wall time does not increase them",
+    "Resuming and finishing persist a real focus record and matching task actualSeconds",
+    "Finishing a focus session alone does not mark its task done",
+    "Explicit completion persists done status without losing actual focus history",
+    "UI logout and login restore exactly the created task and focus record",
+    "Password-confirmed UI deletion removes only this QA account",
+    "Independent previously authenticated session receives HTTP 401 after account deletion",
+    "No unhandled Flutter UI exception remains"
+  ],
+  "cleanup": {"createdQaAccountDeletedThroughUi": true, "independentSessionRevokedVerified": true, "unknownUserDataCleared": false},
+  "classification": "Real Flutter UI and native storage against a real API on the specified emulator; no business or network success was mocked and no paid AI was invoked by this test.",
+  "fixesVerified": ["First-use routing follows loaded account state instead of a single initialization callback", "Registration explicitly opens first-use settings"],
+  "boundaries": ["This integration-test APK is not the final signed release APK; release installation is recorded separately", "API24 and API33+ are not covered by this API32 emulator", "Natural human speech recognition accuracy is not established by this business test"]
+}

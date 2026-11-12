@@ -1,0 +1,75 @@
+name: sera
+x-app: &app
+  build:
+    context: ..
+    dockerfile: deploy/Dockerfile
+  image: sera-app:local
+  env_file:
+    - path: .env
+      required: false
+  restart: unless-stopped
+services:
+  model-init:
+    <<: *app
+    user: root
+    restart: "no"
+    command: ["sh", "-c", "python backend/download_asr_model.py --destination /models && chown -R 10001:10001 /models"]
+    volumes: ["sera-models:/models"]
+  api:
+    <<: *app
+    environment:
+      SERA_ASR_WS_URL: ${SERA_ASR_WS_URL:-ws://127.0.0.1:8080/asr/ws}
+      SERA_TRUSTED_PROXIES: "*"
+      SERA_ASR_HEALTH_URL: http://asr:8790/health
+    ports: ["127.0.0.1:8787:8787"]
+    volumes: ["sera-data:/data"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8787/health')"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+  worker:
+    <<: *app
+    command: ["python", "backend/worker.py", "--db", "/data/sera.sqlite3"]
+    volumes: ["sera-data:/data"]
+    depends_on:
+      api: {condition: service_healthy}
+  asr:
+    <<: *app
+    command: ["python", "backend/local_asr.py", "--host", "0.0.0.0", "--db", "/data/sera.sqlite3", "--model-dir", "/models/sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16"]
+    volumes: ["sera-data:/data", "sera-models:/models:ro"]
+    depends_on:
+      api: {condition: service_healthy}
+      model-init: {condition: service_completed_successfully}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8790/health')"]
+      interval: 30s
+      timeout: 5s
+      start_period: 60s
+  caddy:
+    image: caddy:2.11.2-alpine
+    environment:
+      SERA_SITE_ADDRESS: ${SERA_SITE_ADDRESS:-:80}
+    ports:
+      - "${SERA_BIND:-127.0.0.1}:${SERA_HTTP_PORT:-8080}:80"
+      - "${SERA_BIND:-127.0.0.1}:${SERA_HTTPS_PORT:-8443}:443"
+    volumes: ["./Caddyfile:/etc/caddy/Caddyfile:ro", "caddy-data:/data", "caddy-config:/config"]
+    depends_on:
+      api: {condition: service_healthy}
+      asr: {condition: service_healthy}
+    restart: unless-stopped
+  mailpit:
+    image: axllent/mailpit:v1.29.2
+    profiles: [dev]
+    ports: ["127.0.0.1:8025:8025"]
+    environment:
+      MP_MAX_MESSAGES: 500
+      MP_DATABASE: /data/mailpit.db
+    volumes: ["mailpit-data:/data"]
+    restart: unless-stopped
+volumes:
+  sera-data:
+  sera-models:
+  caddy-data:
+  caddy-config:
+  mailpit-data:

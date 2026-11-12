@@ -1,0 +1,193 @@
+{
+  "startedAt": "2026-10-31T08:22:49.085Z",
+  "baseURL": "http://127.0.0.1:8788",
+  "api": "http://127.0.0.1:8788",
+  "browser": "Chrome, new private Playwright context",
+  "browserFallbackReason": "Browser plugin not available",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cases": [
+    {
+      "name": "ui-register-first-use-settings",
+      "status": "passed",
+      "checks": [
+        "local-only reset empty submit reveals first error at 320x568 without any API submission",
+        "UI registration and signed-in session",
+        "both first-use steps completed through UI",
+        "onboardingComplete persisted",
+        "37 empty manual shortcut at320/390 is unique, reachable48px, and returns without session/entity/AI side effects",
+        "04 manual shortcut actual height at least48px and320 calendar top renders without app errors"
+      ]
+    },
+    {
+      "name": "home-manual-task-save-edit-return-refresh-same-id",
+      "status": "passed",
+      "checks": [
+        "original prompt and notes prefilled without URL duplication",
+        "save/edit/refresh same task ID",
+        "history and repeated source reopening do not add entities"
+      ]
+    },
+    {
+      "name": "manual-source-event-save-history-and-reopen",
+      "status": "passed",
+      "checks": [
+        "API fixture supplied only source input, never a saved result",
+        "manual UI event saved with source completion",
+        "history/reopen/refresh retain same ID and entity counts"
+      ]
+    },
+    {
+      "name": "draft-confirmation-edit-three-round-trips",
+      "status": "passed",
+      "checks": [
+        "three visible confirm/return cycles",
+        "no draft mutation and no real task creation"
+      ]
+    },
+    {
+      "name": "all-day-and-cross-midnight-editor-preserves-real-bounds",
+      "status": "passed",
+      "checks": [
+        "all-day exclusive end renders Nov2, stored exclusive Nov3 preserved",
+        "all-day off/on round-trip retains bounds",
+        "cross-midnight detail includes both dates and times",
+        "edit/save/refresh retains IDs and exact bounds"
+      ]
+    },
+    {
+      "name": "desktop-and-mobile-final-evidence",
+      "status": "passed",
+      "checks": [
+        "desktop and mobile meaningful evidence",
+        "no unhandled app errors",
+        "no prohibited calls attempted"
+      ]
+    }
+  ],
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "pageErrors": [],
+  "httpErrors": [
+    {
+      "path": "/api/v1/auth/me",
+      "status": 401
+    }
+  ],
+  "expectedAuthenticationProbeErrors": [
+    "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ],
+  "requestFailures": [],
+  "blockedRequests": [],
+  "screenshots": [
+    "01-login.png",
+    "01a-reset-empty-first-error-visible-320.png",
+    "02-first-use-settings.png",
+    "02a-empty-demo-manual-320.png",
+    "02a-empty-demo-manual-390.png",
+    "02b-calendar-top-320.png",
+    "03-home-manual-prefill.png",
+    "04-task-edited-refreshed-same-id.png",
+    "history-task-same-result.png",
+    "05-source-event-manual-prefill.png",
+    "history-event-same-result.png",
+    "06-draft-after-three-confirmation-returns.png",
+    "07-all-day-editor.png",
+    "09-all-day-saved-refreshed.png",
+    "08-cross-midnight-editor.png",
+    "10-cross-midnight-saved-refreshed.png",
+    "11-desktop-history-centered.png",
+    "12-mobile-home-complete.png"
+  ],
+  "cleanup": {
+    "attempted": true,
+    "ownIdentityConfirmed": true,
+    "ownAccountDeleted": true,
+    "deletedSessionRejected": true
+  },
+  "scope": "Real local account/workspace API; synthetic source/draft/event fixtures; no AI/SMS/external-mail invocation",
+  "candidate": {
+    "directory": "build/web",
+    "sha256": "2b0d7d615a44285319b45b75729f4bb0d0e510402c69c85015cfb3aae42b458b",
+    "bytes": 5463413
+  },
+  "lastCheckpoint": "desktop-and-mobile-final-evidence",
+  "lastAction": "click:返回",
+  "resetLocalValidation": {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "firstErrorVisible": true,
+    "tokenProvided": false,
+    "mailOrResetApiInvoked": false,
+    "scope": "Browser default text scale; Android 1.5 font and keyboard inset are covered by root widget target, not claimed by this browser check"
+  },
+  "accountFingerprint": "13d240e97d4f",
+  "flutterSemanticsProxyHits": 1,
+  "emptyDemoManualChecks": [
+    {
+      "width": 320,
+      "height": 844,
+      "singleShortcut": true,
+      "tapTargetHeight": 48,
+      "legacyShortcutsAbsent": true,
+      "emptyEditorReturn": true,
+      "newSessions": 0,
+      "newTasks": 0,
+      "newEntries": 0,
+      "aiCallsAttempted": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "singleShortcut": true,
+      "tapTargetHeight": 48,
+      "legacyShortcutsAbsent": true,
+      "emptyEditorReturn": true,
+      "newSessions": 0,
+      "newTasks": 0,
+      "newEntries": 0,
+      "aiCallsAttempted": 0
+    }
+  ],
+  "emptyDemoManualCandidate": {
+    "viewportWidth": 390,
+    "bounds": {
+      "x": 42,
+      "y": 441,
+      "width": 136.59375,
+      "height": 48
+    }
+  },
+  "homeManualTarget": {
+    "width": 390,
+    "bounds": {
+      "x": 40,
+      "y": 325,
+      "width": 117.59375,
+      "height": 48
+    },
+    "reachable": true
+  },
+  "narrowCalendarCheck": {
+    "viewport": {
+      "width": 320,
+      "height": 844
+    },
+    "meaningfulTopRendered": true,
+    "consoleErrors": 0,
+    "pageErrors": 0
+  },
+  "status": "passed",
+  "completedAt": "2026-10-31T08:23:28.103Z",
+  "counts": {
+    "passed": 6,
+    "failed": 0,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "screenshots": 18
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "version": "2.0.3+5",
+  "date": "2026-10-31",
+  "reference": "SERA-Minimal-Aesthetic-Plan v1.0, user-supplied recommendations evaluated against product behavior",
+  "status": "validated",
+  "automated": {
+    "flutter": {
+      "passed": 516,
+      "skipped": 1,
+      "failed": 0,
+      "log": "flutter-final-source.log"
+    },
+    "analyzer": {
+      "diagnostics": 0,
+      "log": "analyze-source-final.log"
+    },
+    "node": {
+      "passed": 32,
+      "failed": 0
+    }
+  },
+  "browser": {
+    "availability": "Browser plugin not available",
+    "fallback": "regular Playwright, Google Chrome private contexts",
+    "fixtureFlow": {
+      "browserFallbackReason": "Browser plugin not available",
+      "contexts": "fresh private Chrome",
+      "environment": "synthetic in-memory Flutter app; same production widgets",
+      "checks": [
+        {
+          "name": "manual input -> task save -> complete -> undo",
+          "passed": true,
+          "inputPreserved": true,
+          "noAI": true
+        },
+        {
+          "name": "responsive inbox",
+          "viewport": {
+            "width": 320,
+            "height": 900
+          },
+          "passed": true
+        },
+        {
+          "name": "responsive inbox",
+          "viewport": {
+            "width": 360,
+            "height": 900
+          },
+          "passed": true
+        },
+        {
+          "name": "responsive inbox",
+          "viewport": {
+            "width": 430,
+            "height": 900
+          },
+          "passed": true
+        },
+        {
+          "name": "responsive inbox",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "blocked": [],
+      "passed": true
+    },
+    "productionSmoke": {
+      "browserFallbackReason": "Browser plugin not available",
+      "base": "http://127.0.0.1:8787",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      ],
+      "httpErrors": [
+        {
+          "status": 401,
+          "path": "/api/v1/auth/me"
+        }
+      ],
+      "blocked": [],
+      "checks": [
+        {
+          "name": "real served release, desktop login, meaningful content, no offline overlay",
+          "passed": true,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "name": "email login -> phone login renders actual form without submitting credentials or SMS",
+          "passed": true,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        }
+      ],
+      "version": {
+        "app_name": "sera_flutter",
+        "version": "2.0.3",
+        "build_number": "5",
+        "package_name": "sera_flutter"
+      },
+      "servedJsSha256": "d59c2e404b3830b703d10d9a2c662d36a21f1a016d4137673c4d4160d56e3b64",
+      "expectedSignedOutResponses": [
+        {
+          "status": 401,
+          "path": "/api/v1/auth/me"
+        }
+      ],
+      "unexpectedConsoleErrors": [],
+      "passed": true
+    }
+  },
+  "layout": {
+    "numberedRoutes": 55,
+    "logicalWidths": [
+      320,
+      360,
+      390,
+      430
+    ],
+    "fontScale": 1.5,
+    "keyboardInsetsCovered": true,
+    "browserWidths": [
+      320,
+      360,
+      430,
+      1280
+    ]
+  },
+  "screenshots": {
+    "cases": 76,
+    "numbered": 55,
+    "accounts": 10,
+    "supplementalStates": 11,
+    "originals": 152,
+    "overviews": 13,
+    "logicalWidth": 390,
+    "scale": 3,
+    "source": "capture-final",
+    "consoleErrors": 0,
+    "warnings": 0,
+    "blockedRequests": 0,
+    "manualVisualInspectionComplete": true,
+    "openFindings": []
+  },
+  "fidelityReview": [
+    "Brand palette and original icon family preserved; text contrast and control boundaries use supplied tokens",
+    "Typography, radii and spacing aligned through shared Flutter components",
+    "Home and task lists flat; task title and real time are the main hierarchy",
+    "Duplicate headings, explain-only cards and unavailable-plan statistics removed",
+    "Primary/secondary actions remain distinct, 48px targets retained",
+    "Cross-day/year dates and short blocks remain readable at 150 percent text",
+    "Above-the-fold copy reviewed against supplied plan; necessary consent, deletion and recovery guidance retained"
+  ],
+  "intentionalDifferences": [
+    "41 uses calendar-file wording on Web and native permission wording on Android",
+    "Weekday choices scroll on narrow or enlarged layouts to retain 48px targets",
+    "Split tasks retain total effort when different from the displayed block"
+  ],
+  "compatibility": {
+    "schema": 2,
+    "businessAndAuthFilesUnchanged": [
+      "pubspec.lock",
+      "lib/application/sera_controller.dart",
+      "lib/domain/models.dart",
+      "lib/data/auth_repository.dart",
+      "lib/data/phone_auth_repository.dart"
+    ],
+    "uiFilesChanged": [
+      "lib/app.dart",
+      "lib/ui/core/calendar_layout.dart",
+      "lib/ui/core/calendar_time_grid.dart",
+      "lib/ui/core/sera_theme.dart",
+      "lib/ui/core/sera_widgets.dart",
+      "lib/ui/screens/account_screens.dart",
+      "lib/ui/screens/main_screens.dart",
+      "lib/ui/screens/phone_auth_screen.dart",
+      "lib/ui/screens/planning_screens.dart",
+      "lib/ui/screens/platform_screens.dart",
+      "lib/ui/screens/task_screens.dart",
+      "lib/ui/screens/voice_screens.dart"
+    ],
+    "certificateSha256": "1dfa3ec18d9e33d30a3dedbbe082f3ccba56c423581bcb8bee24b5b8d02df733",
+    "package": "com.sera.sera_flutter",
+    "androidVersionName": "2.0.3",
+    "androidVersionCode": 5,
+    "signedWithExistingCertificate": true,
+    "apkVerified": true,
+    "aabSignatureAndBundletoolVerified": true
+  },
+  "artifacts": {
+    "webJavaScript": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\web\\main.dart.js",
+      "bytes": 5451263,
+      "sha256": "d59c2e404b3830b703d10d9a2c662d36a21f1a016d4137673c4d4160d56e3b64"
+    },
+    "webManifest": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\web\\sera-cache-manifest.json",
+      "bytes": 11644,
+      "sha256": "5dd83cf591bec08aae6edd64c3a86885af5fd7948079805548364d14478fbcfb"
+    },
+    "apk": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\app\\outputs\\flutter-apk\\app-release.apk",
+      "bytes": 76723520,
+      "sha256": "3fa57bdd7264819ba97d0839819e7deee7034dca08ba587747c67b12daf2afc9",
+      "downloadPath": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-2.0.3+5-20261031.apk"
+    },
+    "aab": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\app\\outputs\\bundle\\release\\app-release.aab",
+      "bytes": 73965664,
+      "sha256": "ea355b54492dc4d0f09c24c3f4e3669b48410d7a1f7855a27992d454072545f8",
+      "downloadPath": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-2.0.3+5-20261031.aab"
+    },
+    "screenshots": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-All-Page-UI-2.0.3+5-20261031.zip",
+      "bytes": 21496738,
+      "sha256": "84da010aad01aa5bfb566ed86efe58885a62eea62d18b868f08fef8e4691b3cd"
+    }
+  },
+  "limits": [
+    "No new physical Android device run in this UI pass; Android rendering/pickers were exercised by Flutter widget tests and release packages verified",
+    "No real SMS, email, paid AI, microphone or native permission operation was triggered",
+    "No new performance measurement; no frame-rate improvement claimed",
+    "The real signed-out Web restore returns one expected401 from /api/v1/auth/me, handled by existing auth logic; no unexpected console errors"
+  ],
+  "intermediateEvidence": "Earlier rejected screenshot attempts and regression logs remain outside the deliverable; final captures are all one source build"
+}

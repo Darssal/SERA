@@ -1,0 +1,107 @@
+{
+  "version": "2.0.2+4",
+  "method": "Online backup before release; compare hashes of every original row and column after real startup",
+  "tables": {
+    "workspace": {
+      "originalRows": 1,
+      "currentRows": 1,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "sessions": {
+      "originalRows": 1,
+      "currentRows": 1,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "account_workspaces": {
+      "originalRows": 1,
+      "currentRows": 1,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "email_actions": {
+      "originalRows": 1,
+      "currentRows": 1,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "sync_operations": {
+      "originalRows": 12,
+      "currentRows": 12,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "jobs": {
+      "originalRows": 0,
+      "currentRows": 0,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "push_subscriptions": {
+      "originalRows": 0,
+      "currentRows": 0,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "push_deliveries": {
+      "originalRows": 0,
+      "currentRows": 0,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "asr_tickets": {
+      "originalRows": 0,
+      "currentRows": 0,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "service_heartbeats": {
+      "originalRows": 1,
+      "currentRows": 1,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "users": {
+      "originalRows": 1,
+      "currentRows": 1,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "auth_schema_migrations": {
+      "originalRows": 1,
+      "currentRows": 1,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "mail_request_limits": {
+      "originalRows": 0,
+      "currentRows": 0,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "email_bindings": {
+      "originalRows": 0,
+      "currentRows": 0,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "sms_auth_challenges": {
+      "originalRows": 1,
+      "currentRows": 1,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    },
+    "phone_identity_proofs": {
+      "originalRows": 0,
+      "currentRows": 0,
+      "allOriginalRowsPreserved": true,
+      "stableRowsEqual": true
+    }
+  },
+  "expectedVolatileColumn": "service_heartbeats.updated_at",
+  "schemaVersion": 2,
+  "integrity": "ok",
+  "foreignKeyViolations": 0,
+  "status": "passed"
+}

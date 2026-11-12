@@ -1,0 +1,8 @@
+# Development only: capture SMTP on the private Compose network.
+services:
+  api:
+    environment:
+      SERA_MAIL_MODE: mailpit
+      SMTP_FROM: sera@localhost
+    depends_on:
+      mailpit: {condition: service_started}

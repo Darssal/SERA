@@ -1,0 +1,14 @@
+{
+  "method": "Fresh SQLite online backup before formal service switch; compared hashes of every original row and column after real migration",
+  "backupCreated": true,
+  "originalTablesChecked": 11,
+  "originalBusinessTablesChecked": 10,
+  "originalBusinessRowsAndColumnsPreserved": true,
+  "heartbeatRowsAndStableFieldsPreserved": true,
+  "expectedVolatileColumn": "service_heartbeats.updated_at; live worker heartbeat",
+  "integrityCheckPassed": true,
+  "foreignKeyCheckPassed": true,
+  "phoneSchemaPresent": true,
+  "schemaVersion": 2,
+  "status": "passed"
+}

@@ -1,0 +1,71 @@
+{
+  "formalOrigin": "http://127.0.0.1:8787/",
+  "live": {
+    "status": "ok",
+    "service": "sera-fastapi",
+    "schemaVersion": 2,
+    "aiConfigured": true,
+    "model": "Qwen/Qwen2.5-7B-Instruct"
+  },
+  "ready": {
+    "status": "ready",
+    "schemaVersion": 2,
+    "components": {
+      "database": {
+        "status": "ok"
+      },
+      "worker": {
+        "status": "ok",
+        "heartbeatAgeSeconds": 1
+      },
+      "asr": {
+        "status": "ok",
+        "model": "sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16",
+        "loadSeconds": 0.5436926000402309
+      },
+      "mail": {
+        "status": "ok",
+        "mode": "smtp",
+        "check": "configuration_only; external delivery requires send verification"
+      },
+      "ai": {
+        "status": "ok"
+      }
+    }
+  },
+  "asr": {
+    "status": "ok",
+    "provider": "sherpa-onnx",
+    "model": "sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16",
+    "configuration": "encoder.int8 + decoder.float + joiner.int8",
+    "loadSeconds": 0.5436926000402309
+  },
+  "phoneCapabilities": {
+    "enabled": true,
+    "message": "支持中国大陆手机号，验证码有效期为 5 分钟。",
+    "codeLength": 6,
+    "cooldownSeconds": 60
+  },
+  "servedWebMatchesRelease": true,
+  "mainDartJsSha256": "8c5a08285c6d836feee48d12acd70093c09c069340f36cc2b84fcf32106d4b30",
+  "android": {
+    "device": "MuMu Android device 1; Android 12 API32; 127.0.0.1:16416",
+    "package": "com.sera.sera_flutter",
+    "updateMethod": "adb install -r",
+    "uninstalledOrCleared": false,
+    "versionCode": "3",
+    "versionName": "2.0.1",
+    "firstInstallTime": "2026-10-31 03:58:02",
+    "lastUpdateTime": "2026-10-31 12:51:13",
+    "firstInstallPreserved": true,
+    "verificationScope": "Prior formal install-r verification; no APK/ADB operation during this server-only configuration reload"
+  },
+  "status": "passed",
+  "observedAtUtc": "2026-10-31T05:09:23.295227+00:00",
+  "smsConfigurationReload": {
+    "enabled": true,
+    "authorizedTestPhoneCount": 1,
+    "additionalSmsSendOrCheckRequests": 0,
+    "backupAndPreservationReport": "feedback-sms-runtime-preservation-20261031.json"
+  }
+}

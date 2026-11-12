@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "status": "passed_final_candidate_flows",
+  "recordedDate": "2026-10-31",
+  "origin": "http://127.0.0.1:8788",
+  "browserAvailability": "Browser plugin not available; root explicitly authorized existing Playwright",
+  "isolatedQaAccounts": true,
+  "credentialsPersistedInReport": false,
+  "screenshotsStorage": "TEMP outside source bundle",
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "initialBundleSha256": "d3ced6706ddb437bed640f684ffcdcea43b6a1d8e9b944cc20d1b80f3392de12",
+  "initialChrome": {
+    "uiLoginA": true,
+    "offlineUiTaskSave": true,
+    "offlineReload": "failed_loading_shell_missing_core_cached_assets",
+    "serviceWorkerControlled": true,
+    "reconnectReloadPreservedTaskIdAndNotes": true,
+    "serverWorkspaceContainedTaskAfterReconnect": true,
+    "tab2RecoveredSharedCookieA": true,
+    "tab2LogoutFollowedByTab1": true,
+    "tab2LoginBFollowedByTab1": true,
+    "bTaskCount": 0,
+    "oldATaskAbsentFromB": true,
+    "realBroadcastEvents": [
+      "logged-out",
+      "logged-in"
+    ],
+    "broadcastKeys": [
+      "apiBaseUrl",
+      "event"
+    ],
+    "broadcastLoopObserved": false,
+    "oldACsrfWithCookieB": {
+      "status": 401,
+      "code": "account_changed",
+      "workspaceFieldAbsent": true
+    },
+    "currentBCsrfReadStatus": 200,
+    "screenshots": [
+      "chrome-offline-saved.png",
+      "chrome-offline-reload.png",
+      "chrome-peer-logged-out.png",
+      "chrome-peer-follows-b.png"
+    ]
+  },
+  "initialEdge": {
+    "browserVersion": "156.0.4314.50",
+    "pageIdentity": true,
+    "notBlank": true,
+    "noFrameworkOverlay": true,
+    "sharedCookieRecoveryA": true,
+    "peerLogout": true,
+    "realBroadcastObserved": true,
+    "peerBIdentityVisibleByFailureSnapshot": true,
+    "firstWorkspaceCreationRace": {
+      "status": 409,
+      "secondTabUi": "connection retry; server workspace already updated",
+      "pendingFinalFixAndRetest": true
+    },
+    "pageErrors": [],
+    "screenshots": [
+      "edge-a-loaded.png",
+      "edge-peer-logout.png",
+      "edge-failure.png"
+    ]
+  },
+  "remaining": [
+    "This is desktop Chrome/Edge at a mobile-sized viewport, not mobile Safari or an actual mobile browser process.",
+    "Does not verify a fully terminated browser process reopening offline; cold test restarted the real worker and document within the same isolated context.",
+    "Successful-run full console output was not retained; no unverified clean-console metric is claimed.",
+    "No browser events, cache contents, credentials or backend successes were mocked."
+  ],
+  "candidateB010": {
+    "bundleSha256": "b0106e8c34b788458b3ef63458c218ba37da485b08d2b4472cf759b8d34a1d07",
+    "manifestVersion": "9af617c12c23b3b0bf2666da57a2befacbbf4addcc8d0dbaa235b7a49ec6981f",
+    "cachedResources": 86,
+    "apiResourcesCached": false,
+    "chrome": {
+      "browserVersion": "156.0.8078.74",
+      "status": "passed",
+      "checks": {
+        "pageIdentity": true,
+        "notBlank": true,
+        "noFrameworkOverlay": true,
+        "apiResponsesExcludedFromCache": true,
+        "offlineUiSave": true,
+        "offlineReloadTaskIdAndNotesPreserved": true,
+        "offlineNoLoadingShell": true,
+        "offlineColdWorkerAndDocumentRestart": true,
+        "reconnectServerContainsOfflineTask": true,
+        "sharedCookieRecovery": true,
+        "peerLogout": true,
+        "peerLoginB": true,
+        "previousIdentityAbsent": true,
+        "staleCsrfRead": {
+          "status": 401,
+          "code": "account_changed",
+          "workspaceAbsent": true
+        },
+        "bWorkspaceEmpty": true,
+        "realBroadcastObserved": true
+      },
+      "pageErrors": [],
+      "workspaceInitialization409Recovered": true,
+      "screenshots": [
+        "chrome-a-loaded.png",
+        "chrome-offline-saved.png",
+        "chrome-offline-reloaded.png",
+        "chrome-offline-cold-start.png",
+        "chrome-online-restored.png",
+        "chrome-peer-logout.png",
+        "chrome-peer-b.png"
+      ]
+    },
+    "edge": {
+      "browserVersion": "156.0.4314.50",
+      "offlineUiSave": true,
+      "offlineReloadTaskIdAndNotesPreserved": true,
+      "offlineColdWorkerAndDocumentRestart": true,
+      "reconnectServerContainsOfflineTask": true,
+      "peerLogout": true,
+      "peerLoginB": "blocked_by_stale_signed_out_marker_at_broadcast_receipt",
+      "realBroadcastEvents": [
+        {
+          "event": "logged-out",
+          "keys": [
+            "apiBaseUrl",
+            "event"
+          ],
+          "signedOutMarkersAtReceipt": [
+            "\"true\""
+          ]
+        },
+        {
+          "event": "logged-in",
+          "keys": [
+            "apiBaseUrl",
+            "event"
+          ],
+          "signedOutMarkersAtReceipt": [
+            "\"true\""
+          ]
+        }
+      ],
+      "markerClearedAtLaterObservation": true,
+      "meRequestMissingAfterLoginEvent": true,
+      "productionFix": "Explicit login broadcast now reads authoritative cookie /me before any metadata; logout directly clears memory. Final rebuilt candidate retest pending.",
+      "screenshots": [
+        "edge-offline-saved.png",
+        "edge-offline-reloaded.png",
+        "edge-offline-cold-start.png",
+        "edge-online-restored.png",
+        "edge-failure.png"
+      ]
+    }
+  },
+  "finalVerification": {
+    "mainSha256": "d75a6c2971b1b0fb2104b8fb7aad0e8a141d74ec48b0158eb256aa304694854f",
+    "manifestVersion": "a3c289eff9f12f9e4831238a6109b9c241cc7e124477477efbdbf38f757dded9",
+    "resources": 86,
+    "resourceBytes": 41543788,
+    "coldStartMethod": "While still offline, CDP ServiceWorker.stopAllWorkers stopped the real worker; closed original document; opened a new page at the same task URL. No cache or IndexedDB contents were injected.",
+    "resultEvidence": "Each complete Playwright process finished all flow assertions, printed PASS and exited 0. Screenshots remain outside the source tree. A later console-diagnostic iteration reached the intended existing rate limiter and is recorded separately.",
+    "chrome": {
+      "browserVersion": "156.0.8078.74",
+      "headless": true,
+      "status": "passed",
+      "checks": {
+        "realUiLoginAndTwoStepOnboarding": true,
+        "offlineUiTaskSave": true,
+        "offlineReloadSameTaskIdAndNotes": true,
+        "offlineColdWorkerRestartAndNewDocument": true,
+        "reconnectServerWorkspaceContainedTask": true,
+        "secondTabRestoredSharedCookieA": true,
+        "secondTabLogoutFollowedByFirstTab": true,
+        "secondTabLoginBFollowedBeforeAnyNavigationReload": true,
+        "sameDocumentAccountRouteShowedB": true,
+        "newAccountTwoTabInitializationSucceeded": true,
+        "currentBWorkspaceTaskCount": 0,
+        "oldATaskAbsentFromB": true,
+        "oldACsrfWithCookieB": {
+          "httpStatus": 401,
+          "code": "account_changed",
+          "workspaceFieldAbsent": true
+        },
+        "currentBCsrfReadHttpStatus": 200,
+        "realBroadcastObserved": true,
+        "broadcastPayloadKeys": [
+          "apiBaseUrl",
+          "event"
+        ],
+        "authenticatedApiResponsesInStaticCache": false
+      },
+      "screenshots": [
+        "chrome-a-loaded.png",
+        "chrome-offline-saved.png",
+        "chrome-offline-reloaded.png",
+        "chrome-offline-cold-start.png",
+        "chrome-online-restored.png",
+        "chrome-peer-logout.png",
+        "chrome-peer-b.png"
+      ]
+    },
+    "edge": {
+      "browserVersion": "156.0.4314.50",
+      "headless": true,
+      "status": "passed",
+      "checks": {
+        "realUiLoginAndTwoStepOnboarding": true,
+        "offlineUiTaskSave": true,
+        "offlineReloadSameTaskIdAndNotes": true,
+        "offlineColdWorkerRestartAndNewDocument": true,
+        "reconnectServerWorkspaceContainedTask": true,
+        "secondTabRestoredSharedCookieA": true,
+        "secondTabLogoutFollowedByFirstTab": true,
+        "secondTabLoginBFollowedBeforeAnyNavigationReload": true,
+        "sameDocumentAccountRouteShowedB": true,
+        "newAccountTwoTabInitializationSucceeded": true,
+        "currentBWorkspaceTaskCount": 0,
+        "oldATaskAbsentFromB": true,
+        "oldACsrfWithCookieB": {
+          "httpStatus": 401,
+          "code": "account_changed",
+          "workspaceFieldAbsent": true
+        },
+        "currentBCsrfReadHttpStatus": 200,
+        "realBroadcastObserved": true,
+        "broadcastPayloadKeys": [
+          "apiBaseUrl",
+          "event"
+        ],
+        "authenticatedApiResponsesInStaticCache": false
+      },
+      "screenshots": [
+        "edge-a-loaded.png",
+        "edge-offline-saved.png",
+        "edge-offline-reloaded.png",
+        "edge-offline-cold-start.png",
+        "edge-online-restored.png",
+        "edge-peer-logout.png",
+        "edge-peer-b.png"
+      ]
+    },
+    "visualInspection": "Offline task detail and same-document B account screenshots inspected: meaningful Chinese content, no framework error overlay or loading shell, visible task actions.",
+    "consoleCoverage": "Complete successful-flow console dumps were not retained; do not claim zero console errors for those runs. The additional instrumented iterations below contain only the expected initial 401, explicit offline network failures and rate-limit 429; no pageerror was recorded there."
+  },
+  "additionalRateLimitDiagnostics": {
+    "chrome": {
+      "purpose": "Additional console diagnostic iteration after the complete passing run",
+      "result": "auth_rate_limited_429",
+      "uiHandledRateLimit": true,
+      "consoleMessages": [
+        {
+          "type": "console-error",
+          "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+        },
+        {
+          "type": "console-error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        }
+      ]
+    },
+    "edge": {
+      "purpose": "Additional console diagnostic iteration after the complete passing run",
+      "result": "auth_rate_limited_429",
+      "uiHandledRateLimit": true,
+      "consoleMessages": [
+        {
+          "type": "console-error",
+          "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+        },
+        {
+          "type": "console-error",
+          "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "type": "console-error",
+          "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "type": "console-error",
+          "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "type": "console-error",
+          "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "type": "console-error",
+          "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+        },
+        {
+          "type": "console-error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        }
+      ]
+    }
+  },
+  "resolvedFindings": [
+    "Static shell lacked Flutter main/runtime/font resources: complete content-hash package fixed and cold/hot offline paths passed in both browsers.",
+    "First empty workspace create CAS raced across two tabs: 409 reload fallback and transactional local queue preservation added; deterministic repository regression plus both-browser fresh-account flow passed.",
+    "Edge real login BroadcastChannel arrived while old signed-out marker was still visible: authoritative cookie /me now precedes metadata gates; explicit logout cannot resurrect the cookie. Both-browser final flow passed."
+  ]
+}

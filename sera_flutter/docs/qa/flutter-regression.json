@@ -1,0 +1,21 @@
+{
+  "recordedDate": "2026-10-31",
+  "flutter": "3.47.2 stable",
+  "dart": "3.13.2",
+  "analysis": {"command": "flutter analyze --no-pub", "status": "passed", "issues": 0},
+  "tests": {
+    "command": "flutter test --no-pub",
+    "status": "passed",
+    "passed": 157,
+    "skipped": 1,
+    "skipReason": "The opt-in paid live AI test is disabled by default; this is not evidence of provider integration.",
+    "layoutCoverage": {"designStates": 55, "logicalWidths": [320, 360, 390, 430], "combinations": 220},
+    "largeTextCoverage": {"logicalWidth": 320, "textScale": 1.5, "coreForms": 10},
+    "includes": ["account/session isolation", "transactional offline operations", "object-version conflicts", "planner/domain rules", "UTC and floating all-day dates", "persistent focus", "planning job recovery", "dialog reverse-animation lifetimes"]
+  },
+  "backend": {"command": "backend/.venv/Scripts/python.exe -m unittest discover -s backend -p test_*.py", "status": "passed", "passed": 53, "realLocalAsrTestsIncluded": 2, "asrArtifactRegressions": 4, "asrConfiguration": "encoder.int8 + decoder.float + joiner.int8", "asrArtifactCoverage": ["missing float decoder cannot fall back to legacy int8", "runtime and package select verified float decoder", "tampered float decoder rejected", "verified cached download excludes legacy decoder from manifest"]},
+  "browserPlatformScripts": {"runner": "node --test", "status": "passed", "passed": 32},
+  "offlineManifest": {"runner": "python -m unittest discover -s test -p platform_offline_manifest_test.py -v", "status": "passed", "passed": 3},
+  "rebootEvidenceParser": {"runner": "python -m unittest discover -s android/tools -p test_*.py -v", "status": "passed", "passed": 2},
+  "classification": "Automated domain/widget/backend/script tests; actual Android and browser evidence is recorded separately."
+}

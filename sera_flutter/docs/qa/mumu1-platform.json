@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "recordedDate": "2026-10-31",
+  "purpose": "Android 平台能力实测记录；仅合成 QA 数据，不含凭据或用户内容。",
+  "device": {
+    "name": "MuMu 安卓设备-1",
+    "instanceIndex": 1,
+    "adbSerial": "127.0.0.1:16416",
+    "androidApi": 32,
+    "physicalResolution": "1080x1920",
+    "densityDpi": 480,
+    "logicalWidth": 360,
+    "otherInstancesModified": false
+  },
+  "calendarProvider": {
+    "initialState": "Calendar Provider 缺失；平台接口正确报告 calendar_unavailable。",
+    "source": "Google 官方 Android SDK default/x86_64 API32 r02 系统镜像",
+    "sourceArchive": "x86_64-32_r02.zip",
+    "sourceArchiveBytes": 667541890,
+    "sourceArchiveSha1": "238452e27d6854d153b6ed119fa783189598eac4",
+    "officialSdkMetadataHashMatched": true,
+    "package": "com.android.providers.calendar",
+    "versionCode": 32,
+    "apkSha256": "66bf40ecba45fb2f330c1145c06ab0dbc6dbfc388114af6e6c06c7858cb95588",
+    "apkV3SignatureVerified": true,
+    "signingCertificateSha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+    "systemPartitionSha256": "a7536d7d4f77252d3fd2b86af3c0d6be20c4976f53836a85a41fddb0ae1c3575",
+    "installation": {
+      "path": "/system/priv-app/CalendarProvider/CalendarProvider.apk",
+      "scope": "仅实例 1 的独立 system-diff.vdi；共享 base 保持只读且哈希不变。",
+      "providerFlagsVerified": ["SYSTEM", "PRIVILEGED"],
+      "existingPrivilegedPermissionAllowlistSufficient": true,
+      "privilegedPermissionAllowlistModified": false,
+      "hiddenApiPolicyModified": false,
+      "hostSecuritySettingsModified": false,
+      "recoveryPointCreatedBeforeSystemWrite": true,
+      "sharedBaseSha256BeforeAndAfter": "47fa59b0f410dd9393c0853e7ce76dfa9eb109ab01f96fd0046db69eda7680a5",
+      "rootPermissionBefore": false,
+      "rootPermissionAfter": false,
+      "rebootAfterRootRestoration": true,
+      "suAvailableAfterReboot": false,
+      "systemMountedReadOnlyAfterInstallation": true,
+      "mumuSystemDiskReadonlyBefore": true,
+      "mumuSystemDiskReadonlyAfter": false,
+      "privateOverlayRetentionReason": "保留实例私有系统差分盘中的可信系统组件；不重新挂载共享 base。"
+    }
+  },
+  "nativeIntegration": {
+    "status": "passed",
+    "test": "integration_test/platform_device_test.dart",
+    "runner": "android/tools/run_platform_qa.py",
+    "command": "python android/tools/run_platform_qa.py --flutter <flutter.bat> --adb <adb.exe> --device 127.0.0.1:16416 --external",
+    "flutterArguments": ["--no-pub", "--reporter", "expanded", "--dart-define=PLATFORM_QA_EXTERNAL=true"],
+    "testDurationSecondsReported": 8,
+    "testCasesPassed": 1,
+    "runtimePermissionsGrantedOnlyToTestedApp": ["READ_CALENDAR", "WRITE_CALENDAR", "RECORD_AUDIO"],
+    "notificationPermissionNote": "API32 无 POST_NOTIFICATIONS 运行时授权弹窗；该权限的 API33+ 分支未由本设备验收。",
+    "checks": [
+      {"id": "calendar-create-list", "status": "passed", "evidence": "真实创建 LOCAL SERA 日历并在系统日历列表中回读。"},
+      {"id": "calendar-crud-dedupe", "status": "passed", "evidence": "插入、相同数据返回 unchanged 且设备 ID 不变、修改、删除、重复空同步均通过真实 Calendar Provider。"},
+      {"id": "calendar-timed-zone", "status": "passed", "evidence": "有时间日程携带 America/Los_Angeles 时区，系统字段回读保持一致。"},
+      {"id": "calendar-all-day-write", "status": "passed", "evidence": "2026-11-01 洛杉矶夏令时结束日，全天起止写成 UTC 午夜纯日期，Provider 回读指纹 unchanged。"},
+      {"id": "calendar-external-update-conflict", "status": "passed", "evidence": "主机 adb content 工具仅修改带 QA 标记的真实系统事件；同步报告外部修改冲突，显式 overwriteConflicts 后成功。"},
+      {"id": "calendar-delete-retry", "status": "passed", "evidence": "系统事件再次外部修改后，删除被保护；失败映射保留，显式覆盖重试真实删除成功。"},
+      {"id": "notification-schedule-version-route-cancel", "status": "passed", "evidence": "原生 AlarmManager 调度成功，记录包含非空版本及任务详情路由，取消后调度列表为空。"},
+      {"id": "notification-test-post", "status": "passed", "evidence": "实际调用 Android NotificationManager 测试通知；设备集成未验证用户点击通知后的页面导航或重启后的闹钟触发。"},
+      {"id": "audio-real-pcm", "status": "passed", "evidence": "AudioRecord 实际产生 3200 字节的 16kHz 单声道 s16le PCM 帧，停止并释放输入设备。"},
+      {"id": "audio-reopen-wav", "status": "passed", "evidence": "停止实时流后再次开启文件录音，返回非空 audio/wav、RIFF 文件头及有效时长。"}
+    ],
+    "cleanup": {
+      "qaCalendarEventsRemovedInFinally": true,
+      "qaNotificationsCanceled": true,
+      "audioReleased": true,
+      "accountScopeResetToSignedOut": true,
+      "temporaryAdbForwardRemoved": true,
+      "qaAccountScope": "qa-platform-device-v3",
+      "appContainsQaServerInProduction": false,
+      "testApkIsReleaseDeliverable": false
+    }
+  },
+  "supportingAutomatedVerificationBeforeFinalDateFix": {
+    "platformDartTestsPassed": 38,
+    "platformNodeTestsPassed": 25,
+    "platformAnalyze": "No issues found",
+    "notes": "以上为平台工作线已完成的运行结果；全项目最终回归与正式构建由主工作线另行记录。"
+  },
+  "postIntegrationSourceChanges": {
+    "status": "passed_final_reexecution",
+    "reason": "最终源码串行通过全量 Flutter 回归，并在 MuMu 设备-1 重跑包含真实外部编辑的整套平台集成。",
+    "changes": [
+      "SeraCalendar.busyEvents 对全天事件直接返回 Calendar Provider 原始 UTC BEGIN/END 毫秒，不先转换设备当地午夜。",
+      "ExternalBusyEvent.fromJson 对全天毫秒以 isUtc:true 取年月日，再构造非 UTC floating DateTime；非全天保留原始瞬时。"
+    ],
+    "regressionTest": "test/platform_channel_test.dart: all-day busy JSON keeps UTC dates when mapped to a western zone",
+    "assertions": ["UTC 日期解析为本地 floating 午夜", "映射 America/Los_Angeles 后仍为 11 月 1 日至 2 日", "夏令时结束当天区间为 25 小时", "非全天 JSON 的 epoch 毫秒保持不变"],
+    "dartFormatCompleted": true,
+    "flutterTestsRunAfterTheseChanges": true,
+    "deviceIntegrationRunAfterTheseChanges": true
+  },
+  "postIntegrationWebAccountIsolation": {
+    "status": "passed",
+    "command": "node --test test/platform_bridge_test.mjs test/platform_worker_test.mjs",
+    "testsPassed": 27,
+    "testsFailed": 0,
+    "checks": [
+      "Service Worker get-scope RPC 从 IndexedDB 读取持久账户，不隐式切换。",
+      "两个独立页面 runtime 共享 Worker；B 登录并订阅后，A 的通知展示、订阅、取消和订阅查询均报 stale_account。",
+      "A 的过期操作不增加系统通知、不创建订阅且不取消 B 的订阅；失效页面须重新初始化 scope。"
+    ]
+  },
+  "remainingAcceptanceBoundaries": [
+    "本设备 API32 的通过结果不替代 API33+ 通知运行时授权验收。",
+    "重启后的真实定时提醒已单独通过主机观测实验，见 mumu1-reminder-reboot.json；通知点击完整应用导航与免打扰实际投递时刻未由本项平台测试验收。",
+    "Web Push 关闭页面后的真实网络投递、部署 HTTPS 与浏览器订阅端到端验收，由 Web 与部署工作线单独记录。"
+  ]
+}

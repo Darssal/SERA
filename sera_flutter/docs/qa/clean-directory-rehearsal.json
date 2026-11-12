@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "kind": "isolated-new-directory-reproduction",
+  "cleanOperatingSystem": false,
+  "containerRuntimeTested": false,
+  "dependencies": "existing Python 3.11 virtualenv reused",
+  "ports": {
+    "api": 8792,
+    "asr": 8793
+  },
+  "checks": {
+    "publicWebAndArchiveExcludePythonCaches": true,
+    "sourceAndModelArchiveHashes": true,
+    "sourceExcludesPrivateRuntimeMaterial": true,
+    "packagedWebHash": true,
+    "apiWorkerAsrReadiness": {
+      "status": "ready",
+      "schemaVersion": 2,
+      "components": {
+        "database": {
+          "status": "ok"
+        },
+        "worker": {
+          "status": "ok",
+          "heartbeatAgeSeconds": 1
+        },
+        "asr": {
+          "status": "ok",
+          "model": "sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16",
+          "loadSeconds": 0.43529920000582933
+        },
+        "mail": {
+          "status": "ok",
+          "mode": "local",
+          "check": "configuration_only; external delivery requires send verification"
+        },
+        "ai": {
+          "status": "ok"
+        }
+      }
+    },
+    "loadedAsrConfiguration": {
+      "status": "ok",
+      "provider": "sherpa-onnx",
+      "model": "sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16",
+      "configuration": "encoder.int8 + decoder.float + joiner.int8",
+      "loadSeconds": 0.43529920000582933
+    },
+    "verifiedRuntimeModelFiles": [
+      "encoder-epoch-99-avg-1.int8.onnx",
+      "decoder-epoch-99-avg-1.onnx",
+      "joiner-epoch-99-avg-1.int8.onnx",
+      "tokens.txt"
+    ],
+    "runtimeModelManifestConfigurationMatchesHealth": true,
+    "servedWebHash": true,
+    "httpOnlyRegistrationAndMe": true,
+    "personalWorkspaceCrud": true,
+    "packagedModelActualInference": {
+      "finalReceived": true,
+      "textLength": 0,
+      "decodeWallSeconds": 0.06705160002456978,
+      "input": "1.2-second generated PCM silence; no speech-accuracy claim"
+    },
+    "backupRestoreIntegritySessionAndWorkspace": true,
+    "apiCredentialFileNotCopied": true
+  },
+  "previousExecution": {
+    "status": "passed",
+    "testedArchiveSha256": "bab8da662b4ef2093b418a92e1af073ec6362e24eae8b2c5066fba8403b438f6",
+    "modelArchiveSha256": "b56e0f77e28d395820368d0bbd22694fa015e445a95ca4866ca632d1600e1fd3",
+    "runtimeCodeDigest": "fb1378e09c08311912904883366364c217934d29a2a6a11c73a51ebe40abc168",
+    "runtimeMembers": 322,
+    "finishedAt": "2026-10-30T20:09:20Z",
+    "scope": "Historical pre-correction all-int8 decoder run; superseded by this execution with verified float decoder. Silence protocol smoke did not validate speech quality."
+  },
+  "temporaryDirectoryName": "sera-delivery-reproduction-okxtc516",
+  "startedAt": "2026-10-30T20:31:03Z",
+  "stage": "online-backup-and-isolated-restore",
+  "sourceArchiveSha256": "d93283445d8b22a02fdd2da19d0120c1b26d51229f4f5d4479cc7bab4615ca20",
+  "modelArchiveSha256": "bf72bf6ed794c651b2c42285bee49414214aad2ca05ddc5ecf349dceb1dcfdab",
+  "testedArchiveSha256": "d93283445d8b22a02fdd2da19d0120c1b26d51229f4f5d4479cc7bab4615ca20",
+  "runtimeCodeDigest": "d8583fc95d7ba72502243066c42e2ce083a45978ed91148c5f62579c0deb51b4",
+  "runtimeDigestAlgorithm": "SHA256 of UTF-8 compact JSON sorted by path; each non-directory ZIP member has path,bytes,sha256; exclude docs path components and .md/.sha256 files.",
+  "runtimeMembers": 323,
+  "artifactHashes": {
+    "sera_flutter/build/app/outputs/bundle/release/app-release.aab": "baa4d3879a3f13c15d71bbb0660fda7b7bfcac594eb1941e9812f4ad346506f4",
+    "sera_flutter/build/app/outputs/flutter-apk/app-release.apk": "548b4e6083ed3cae3849cfec677f1808ed438e9abd16eeb263417a99a70352d5",
+    "sera_flutter/build/web/main.dart.js": "d75a6c2971b1b0fb2104b8fb7aad0e8a141d74ec48b0158eb256aa304694854f"
+  },
+  "finalArchiveScope": "Final archive may add/update documentation only; root must verify this runtimeCodeDigest and artifact hashes remain equal.",
+  "status": "passed",
+  "ownedPortsClosed": true,
+  "finishedAt": "2026-10-30T20:31:21Z",
+  "finalDocumentationRepackRuntimeEquivalence": {
+    "status": "passed",
+    "runtimeCodeDigest": "d8583fc95d7ba72502243066c42e2ce083a45978ed91148c5f62579c0deb51b4",
+    "runtimeMembers": 323,
+    "scope": "Runtime and all three build artifacts equal the corrected-model isolated rehearsal. The final packaging command rechecks actual ZIP members after documentation repack."
+  }
+}

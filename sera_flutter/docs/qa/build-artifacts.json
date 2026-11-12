@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "version": "2.0.0+2",
+  "recordedDate": "2026-10-31",
+  "toolchain": {
+    "flutter": "3.47.2 stable",
+    "dart": "3.13.2",
+    "python": "3.11",
+    "java": "21"
+  },
+  "android": {
+    "apk": {
+      "path": "build/app/outputs/flutter-apk/app-release.apk",
+      "bytes": 75822396,
+      "sha256": "548b4e6083ed3cae3849cfec677f1808ed438e9abd16eeb263417a99a70352d5"
+    },
+    "aab": {
+      "path": "build/app/outputs/bundle/release/app-release.aab",
+      "bytes": 73221565,
+      "sha256": "baa4d3879a3f13c15d71bbb0660fda7b7bfcac594eb1941e9812f4ad346506f4"
+    },
+    "minSdk": 24,
+    "targetSdk": 36,
+    "abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86_64"
+    ],
+    "courseSignature": {
+      "algorithm": "RSA",
+      "bits": 3072,
+      "certificateSha256": "1dfa3ec18d9e33d30a3dedbbe082f3ccba56c423581bcb8bee24b5b8d02df733",
+      "apkSignatureSchemeV2Verified": true,
+      "aabJarSignatureVerified": true,
+      "selfSignedCourseCertificate": true,
+      "aabBundletoolValidationPassed": true
+    },
+    "device": {
+      "serial": "127.0.0.1:16416",
+      "name": "MuMu 安卓设备-1",
+      "api": 32,
+      "versionName": "2.0.0",
+      "versionCode": 2,
+      "installedApkSha256": "548b4e6083ed3cae3849cfec677f1808ed438e9abd16eeb263417a99a70352d5",
+      "installedHashMatchesDeliverable": true,
+      "releaseNotDebuggable": true,
+      "processRunning": true,
+      "coldLaunchActivityStatus": "ok",
+      "loginScreenVisuallyInspected": true,
+      "aabDeviceSplitsTest": "aab-device-validation.json",
+      "finalInstalledVariant": "universal signed release APK"
+    }
+  },
+  "web": {
+    "main": {
+      "path": "build/web/main.dart.js",
+      "bytes": 5328399,
+      "sha256": "d75a6c2971b1b0fb2104b8fb7aad0e8a141d74ec48b0158eb256aa304694854f"
+    },
+    "offlineManifestVersion": "a3c289eff9f12f9e4831238a6109b9c241cc7e124477477efbdbf38f757dded9",
+    "cachedResources": 86,
+    "cachedBytes": 41543788,
+    "apiMode": "same-origin HttpOnly Cookie",
+    "archive": {
+      "name": "SERA-Web-v2.zip",
+      "bytes": 26061476,
+      "sha256": "4c9d44a1fd7c357feea91d1b34a01487d6756394fe3b779ce452adc6f53cda40"
+    }
+  },
+  "models": {
+    "archive": "SERA-ASR-CPU-Models-v2.zip",
+    "sha256": "bf72bf6ed794c651b2c42285bee49414214aad2ca05ddc5ecf349dceb1dcfdab",
+    "bytes": 52442848,
+    "configuration": "encoder.int8 + decoder.float + joiner.int8",
+    "decoderSha256": "89be509a83175261695bdef5fd1c7b9ab1129a663d1284e7ba9f8507b21e0906",
+    "mainStackHealthConfigurationVerified": true
+  },
+  "sourceArchive": {
+    "name": "SERA-Flutter-Fullstack-v2.zip",
+    "checksum": "See the adjacent .zip.sha256 file; stored outside the archive to avoid a self-reference."
+  }
+}

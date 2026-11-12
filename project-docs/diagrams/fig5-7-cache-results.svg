@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="396" height="177" preserveAspectRatio="xMinYMin meet" viewBox="0 0 396 177" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="396" height="177"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-177)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="396" height="177" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="105" y="157" width="10" height="10" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.45; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<text x="121" y="158" style="font-family: Song; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,316) scale(1,-1)">本地复用</text>
+			<rect x="233" y="157" width="10" height="10" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.45; fill: rgb(87%,87%,87%); fill-rule: evenodd;"/>
+			<text x="249" y="158" style="font-family: Song; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,316) scale(1,-1)">网络下载</text>
+			<text x="5" y="117" style="font-family: Song; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,234) scale(1,-1)">资源数量</text>
+			<rect x="69" y="111" width="303.5675675675676" height="25" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="372.5675675675676" y="111" width="8.432432432432392" height="25" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(87%,87%,87%); fill-rule: evenodd;"/>
+			<rect x="69" y="111" width="312" height="25" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.45; fill: none; fill-rule: evenodd;"/>
+			<text x="74" y="119" style="font-family: Song; font-size: 11px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,238) scale(1,-1)">97.3%</text>
+			<text x="261.0" y="95" style="font-family: Song; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,190) scale(1,-1)">复用 72 个  /  下载 2 个</text>
+			<text x="5" y="57" style="font-family: Song; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,114) scale(1,-1)">资源字节</text>
+			<rect x="69" y="51" width="267.43602854546594" height="25" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(33%,33%,33%); fill-rule: evenodd;"/>
+			<rect x="336.43602854546594" y="51" width="44.563971454534055" height="25" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(87%,87%,87%); fill-rule: evenodd;"/>
+			<rect x="69" y="51" width="312" height="25" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.45; fill: none; fill-rule: evenodd;"/>
+			<text x="74" y="59" style="font-family: Song; font-size: 11px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,118) scale(1,-1)">85.7%</text>
+			<text x="161.0" y="35" style="font-family: Song; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,70) scale(1,-1)">复用 36,160,346 字节  /  下载 6,025,548 字节</text>
+			<text x="95.5" y="5" style="font-family: Song; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,10) scale(1,-1)">2.2.0 → 2.2.1 真实构建资源的缓存升级测试</text>
+		</g>
+	</g>
+</svg>

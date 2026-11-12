@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-30T19:51:28.966Z",
+  "flow": "新QA账号 → 真实Chrome订阅 → 后端注册 → 关闭全部应用页 → 实际Push投递 → SW通知记录",
+  "baseUrl": "http://127.0.0.1:8788",
+  "buildMainSha256": "d75a6c2971b1b0fb2104b8fb7aad0e8a141d74ec48b0158eb256aa304694854f",
+  "browserAvailability": "Browser plugin not available; root explicitly authorized existing Playwright",
+  "isolatedProfile": true,
+  "isolatedNewQaAccount": true,
+  "headful": true,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "proxy": "127.0.0.1:10808",
+  "proxyBypass": [
+    "127.0.0.1",
+    "localhost"
+  ],
+  "disableBackgroundNetworkingDefaultRemoved": true,
+  "stages": [
+    {
+      "name": "new-independent-account-created",
+      "at": "2026-10-30T19:51:29.879Z",
+      "httpStatus": 201,
+      "cookieSession": true
+    },
+    {
+      "name": "rendered-notification-page",
+      "at": "2026-10-30T19:51:35.746Z",
+      "meaningful": true,
+      "notificationPermission": "granted"
+    },
+    {
+      "name": "real-service-worker-ready",
+      "at": "2026-10-30T19:51:35.749Z",
+      "scope": "http://127.0.0.1:8788/",
+      "active": "activated",
+      "scriptName": "/sera-sw.js",
+      "pushSupported": true
+    },
+    {
+      "name": "complete-runtime-cache-ready",
+      "at": "2026-10-30T19:51:35.812Z",
+      "ready": true,
+      "resources": 86,
+      "bootstrap": true,
+      "main": true,
+      "canvasWasm": true,
+      "chineseFont": true,
+      "refreshIcon": true
+    },
+    {
+      "name": "real-offline-reload-and-cold-reopen",
+      "at": "2026-10-30T19:51:38.075Z",
+      "reloadRendered": true,
+      "coldReopenRendered": true
+    },
+    {
+      "name": "clicked-enable-background-reminders",
+      "at": "2026-10-30T19:51:40.155Z"
+    },
+    {
+      "name": "real-browser-subscription-created",
+      "at": "2026-10-30T19:51:46.226Z",
+      "hasEndpoint": true,
+      "hasP256dh": true,
+      "hasAuthKey": true
+    },
+    {
+      "name": "backend-registration",
+      "at": "2026-10-30T19:51:46.250Z",
+      "httpStatus": 200,
+      "registered": true
+    },
+    {
+      "name": "test-queued-with-app-pages-closed",
+      "at": "2026-10-30T19:51:46.368Z",
+      "httpStatus": 202,
+      "openApplicationPages": 0
+    },
+    {
+      "name": "background-delivery-result",
+      "at": "2026-10-30T19:51:52.058Z",
+      "deliveredBeforeReopen": true,
+      "lastStatus": "shown"
+    }
+  ],
+  "browserErrors": [],
+  "networkErrors": [
+    "net::ERR_INTERNET_DISCONNECTED"
+  ],
+  "status": "passed_real_background_push",
+  "browserVersion": "156.0.8078.74",
+  "accountIdSha256": "6da2313a6fff1b4832a65a03f520edc2b874d5d4f6848dd972640c06d561789b",
+  "pageIdentity": {
+    "title": "SERA · 序日",
+    "origin": "http://127.0.0.1:8788"
+  },
+  "initialPageMeaningful": true,
+  "frameworkOverlay": false,
+  "firstScreenshot": "sera-taskui-webpush-before-1793389888965.png",
+  "servedFinalBundleShaVerified": true,
+  "offlineCache": {
+    "ready": true,
+    "resources": 86,
+    "bootstrap": true,
+    "main": true,
+    "canvasWasm": true,
+    "chineseFont": true,
+    "refreshIcon": true
+  },
+  "offlineReloadRendered": true,
+  "offlineReloadScreenshot": "sera-taskui-offline-reload-1793389888965.png",
+  "offlineColdReopenRendered": true,
+  "offlineColdScreenshot": "sera-taskui-offline-cold-1793389888965.png",
+  "backendSubscriptionRegistered": true,
+  "allApplicationPagesClosedAt": "2026-10-30T19:51:46.335Z",
+  "openApplicationPagesAtQueue": 0,
+  "testQueued": true,
+  "lastWorkerObservation": {
+    "notificationCount": 1,
+    "lastStatus": "shown",
+    "lastAt": 1793389908503
+  },
+  "backgroundPushDeliveredBeforeReopen": true,
+  "backgroundDeliveryObservedAt": "2026-10-30T19:51:49.393Z",
+  "notificationRoute": "/27",
+  "appReopenedAt": "2026-10-30T19:51:49.394Z",
+  "afterScreenshot": "sera-taskui-webpush-after-1793389888965.png",
+  "notificationClickVerified": false,
+  "qaSubscriptionRemovedFromBackend": true,
+  "completedAt": "2026-10-30T19:51:52.515Z",
+  "screenshotStorage": "TEMP outside source bundle",
+  "manifestVersion": "a3c289eff9f12f9e4831238a6109b9c241cc7e124477477efbdbf38f757dded9",
+  "proof": {
+    "realBrowserPushManagerSubscription": true,
+    "renderedEnableControlClicked": true,
+    "serverRegisteredRealSubscription": true,
+    "allApplicationPagesClosedBeforeEnqueue": true,
+    "browserProcessKeptAliveWithAboutBlankOnly": true,
+    "noSyntheticPushEventUsed": true,
+    "swShownTimestampBeforeReopen": true,
+    "systemNotificationMatchedQueuedUniqueDelivery": true,
+    "notMerelyHttp202OrMockPass": true
+  },
+  "consoleAssessment": {
+    "unhandledPageErrors": 0,
+    "networkErrors": "Only intentional ERR_INTERNET_DISCONNECTED during true offline phases; no unexpected network error.",
+    "screenshotsVisuallyReviewed": true
+  },
+  "supportingAutomatedTests": {
+    "platformNodePassed": 32,
+    "manifestPythonPassed": 2
+  },
+  "previousVerifiedBuilds": [
+    "d3ced6706ddb437bed640f684ffcdcea43b6a1d8e9b944cc20d1b80f3392de12",
+    "b0106e8c34b788458b3ef63458c218ba37da485b08d2b4472cf759b8d34a1d07"
+  ],
+  "limitations": [
+    "Chrome Windows headful实测，浏览器进程保持存活；未涵盖操作系统强制退出浏览器后的投递。",
+    "真实系统通知点击未操作；已读取通知route=/27，但不把payload路由检查算作实际点击验收。",
+    "本记录的离线验收覆盖运行壳、字体素材与页面重开；离线任务CRUD和恢复同步由独立业务验收记录覆盖。"
+  ]
+}

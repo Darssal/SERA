@@ -1,0 +1,113 @@
+{
+  "version": "2.0.6+8",
+  "status": "validated",
+  "scope": "Bounded workweek time viewport with actual-entry time range",
+  "targetedTestsPassed": 30,
+  "analyzerDiagnostics": 0,
+  "browser": {
+    "fallback": "Browser plugin not available",
+    "flow": "工作周 -> 时间区内滚动 -> 打开事项 -> 返回原位置",
+    "checks": [
+      {
+        "name": "Compact week keeps the header visible, scrolls to late items, retains position after detail, and opens overlap choices",
+        "passed": true
+      },
+      {
+        "name": "A late-only week starts near its actual arrangement without a long empty morning",
+        "passed": true
+      },
+      {
+        "name": "Both midnight and the last two minutes of Friday stay reachable and open the correct event",
+        "passed": true
+      },
+      {
+        "name": "Responsive week renders without an error overlay",
+        "width": 320,
+        "passed": true
+      },
+      {
+        "name": "Responsive week renders without an error overlay",
+        "width": 1280,
+        "passed": true
+      }
+    ],
+    "errors": [],
+    "blocked": [],
+    "passed": true
+  },
+  "productionWeb": {
+    "browserFallbackReason": "Browser plugin not available",
+    "base": "http://127.0.0.1:8787",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "httpErrors": [
+      {
+        "status": 401,
+        "path": "/api/v1/auth/me"
+      }
+    ],
+    "blocked": [],
+    "checks": [
+      {
+        "name": "real served release, desktop login, meaningful content, no offline overlay",
+        "passed": true,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      {
+        "name": "email login -> phone login renders actual form without submitting credentials or SMS",
+        "passed": true,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "version": {
+      "app_name": "sera_flutter",
+      "version": "2.0.6",
+      "build_number": "8",
+      "package_name": "sera_flutter"
+    },
+    "servedJsSha256": "54a652e7e26e20d2f4fd68afefe8b9b4aaf967de3c1f4086c19315875739e197",
+    "expectedSignedOutResponses": [
+      {
+        "status": 401,
+        "path": "/api/v1/auth/me"
+      }
+    ],
+    "unexpectedConsoleErrors": [],
+    "passed": true
+  },
+  "artifacts": {
+    "apk": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-2.0.6+8-20261031.apk",
+      "bytes": 77231568,
+      "sha256": "fae3e2ece84427e8db5b43edba33c0970c491e129beb7f99144d18707f45389b"
+    },
+    "aab": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-2.0.6+8-20261031.aab",
+      "bytes": 74408167,
+      "sha256": "809899f1ee96e80d83bf62f5a73255a80372308d2dfdec46e8a37857cf91cfbb"
+    },
+    "web": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\web\\main.dart.js",
+      "bytes": 5539035,
+      "sha256": "54a652e7e26e20d2f4fd68afefe8b9b4aaf967de3c1f4086c19315875739e197"
+    },
+    "offlineManifest": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\web\\sera-cache-manifest.json",
+      "bytes": 11644,
+      "sha256": "65e336d4d5ab4281cfcb830cddaa1ec7e7274002d75f2e22c6570c0638e48121"
+    }
+  },
+  "previousWeb": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-week-compact-20261031\\previous-web",
+  "limits": [
+    "No new physical Android test",
+    "No backend or stored data changes",
+    "Android uses the existing local API connection and release certificate"
+  ]
+}

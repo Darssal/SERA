@@ -1,0 +1,38 @@
+{
+  "model": "sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16",
+  "provider": "cpu",
+  "loadSeconds": 0.4336304999887943,
+  "audioSeconds": 10.053125,
+  "decodeSeconds": 0.22996700002113357,
+  "realTimeFactor": 0.02287517563157064,
+  "firstPartialComputeSeconds": 0.0255606000428088,
+  "firstPartialAudioSeconds": 1.1,
+  "partialCount": 14,
+  "text": "昨天是 MONDAY TODAY IS THEY AFTER TOMORROW是星期三",
+  "audioSha256": "7d93384ca14702cc584a7a33fe2fed92e89e708549161cb12ea38c916882103b",
+  "recordedAt": "2026-10-30T20:27:20.398244+00:00",
+  "configuration": "encoder.int8 + decoder.float + joiner.int8",
+  "runtimeSha256": {
+    "encoder-epoch-99-avg-1.int8.onnx": "db6f51551762e40e549166fe041ea3e45464370b595e9ad23f06478ec3794fbb",
+    "decoder-epoch-99-avg-1.onnx": "89be509a83175261695bdef5fd1c7b9ab1129a663d1284e7ba9f8507b21e0906",
+    "joiner-epoch-99-avg-1.int8.onnx": "bdda356d6f9b8c2d7cee9ee0e26075fa537490f7fd06520be408d287073667b9",
+    "tokens.txt": "a8e0e4ec53810e433789b54a5c0134a7eaa2ffca595a6334d54c00da858841d3"
+  },
+  "previousConfiguration": {
+    "configuration": "encoder.int8 + decoder.int8 + joiner.int8 (superseded incorrect combination)",
+    "result": {
+      "model": "sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16",
+      "provider": "cpu",
+      "loadSeconds": 0.5259842000086792,
+      "audioSeconds": 10.053125,
+      "decodeSeconds": 0.2603162999730557,
+      "realTimeFactor": 0.025894067762318257,
+      "firstPartialComputeSeconds": 0.03207959997234866,
+      "firstPartialAudioSeconds": 1.1,
+      "partialCount": 12,
+      "text": "昨天是 MONDAY TODAYS TOMORROW是星期三",
+      "audioSha256": "7d93384ca14702cc584a7a33fe2fed92e89e708549161cb12ea38c916882103b"
+    }
+  },
+  "metricNotes": "Same official WAV; local CPU inference compute benchmark, not real-time paced or human accuracy."
+}

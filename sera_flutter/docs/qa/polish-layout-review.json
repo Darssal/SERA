@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-31",
+  "purpose": "已验 Web fixture 布局及交互证据归档；不替代最终正式 Web 业务报告。",
+  "browser": "Google Chrome / regular Playwright / 独立私有上下文",
+  "browserFallbackReason": "本会话未提供 Browser plugin，按已授权路径使用 regular Playwright。",
+  "scope": {
+    "fixtureOnly": true,
+    "initialTarget": "http://127.0.0.1:8793",
+    "calendarFollowUpTarget": "http://127.0.0.1:8794",
+    "finalSourceScreenshotClaim": false,
+    "finalFullPage48PixelTargetClaim": false,
+    "explanation": "fixture 编译早于最终源码；图片按实际快照归档，不标为最终正式产品全页截图。"
+  },
+  "builds": {
+    "fixture8793ManifestVersion": "6d207c4973969201db20b620bf4900f10ccde1279584d9fe7e24f7f561a27ca6",
+    "fixture8794ManifestVersion": "8a9378110f12db120cc869b00d65986f4c6d04dc8c8067836f8ac78ea68b0427",
+    "fixture8794ManifestFileSha256": "5adae101c2d9feb86c531ee42df53c8b3ae8e0c0324217f5a20e77916fb48ebb"
+  },
+  "coverage": {
+    "initialStatic": {
+      "uniqueCases": 99,
+      "numberedEntrypoints": 55,
+      "numberedViewport": "390x844",
+      "accountViewports": [
+        "320x844",
+        "390x844"
+      ],
+      "additionalResponsiveViewports": [
+        "320x844",
+        "430x844",
+        "1280x900"
+      ],
+      "manualVisualReview": "99 张 top、55 张 bottom、17 张成功交互图经 20 张联系表视检，并抽查关键原图。",
+      "rawResult": "98 pass / 1 fail；51 自动完成后跳转 11，初次严格同 URL 断言失败；定向按预期终点复验自然 1 pass。原始失败未重标。"
+    },
+    "initialInteractions": {
+      "uniqueCases": 10,
+      "status": "verified with targeted harness correction",
+      "areas": [
+        "首页原文带入任务编辑及取消保留",
+        "折叠输入保留",
+        "底导航与收件箱 filter",
+        "任务详情及偏好/提醒折叠",
+        "绑定表单本地输入启用发送但未发送",
+        "日历详情及全天/跨夜选择"
+      ],
+      "rawResult": "9 pass / 1 fail；收件箱 helper 预滚动坐标失效，修正为实际元素新坐标后独立复验自然 1 pass。原始失败未重标。"
+    },
+    "finalCalendar": {
+      "passed": 7,
+      "failed": 0,
+      "routes": [
+        "12",
+        "13",
+        "14"
+      ],
+      "viewports": [
+        "320x844",
+        "390x844"
+      ],
+      "manualVisualReview": "6 组日/工作周/月布局，共 12 张 top/bottom 图经联系表及关键原图人工复核。",
+      "workweek": "实际横向 wheel 到周五；重叠数量入口宽 49px、高约 80.8px；打开 2项 列表并分别确认两个正确详情目的地。",
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "httpErrors": 0
+    },
+    "finalTargetedRaw": {
+      "passed": 9,
+      "failed": 2,
+      "explanation": "7 日历通过及 2 张偏好/提醒展开图通过；2 项失败均为旧 37 重复入口。原始 raw 仍为 9/2。"
+    }
+  },
+  "resolvedCalendarFindings": [
+    "320px 年月标题由 月 单独换行改为年份/完整月份两层。",
+    "320px 工作周保持最小列宽并允许水平滚动，周五 2项 入口实测 49px 宽，选择两项均落到正确详情。"
+  ],
+  "comparison": {
+    "calendar": "12/13 并排图使用同一普通 fixture 数据、同一 320x844 视口；左为 8793，右为 8794。calendarEdge 新增内容不作为视觉改进。",
+    "before18_31_33": "旧版反馈图从 docs/qa/feedback-ui 按字节复制；原像素未修改。",
+    "after18": "18-430-top 来自 8793 已验原图。",
+    "after31_33": "31/33-390-expanded 来自 8794 实际展开后的已验原图；未点击保存、通知权限或测试提醒。"
+  },
+  "page37": {
+    "fixtureStatus": "failed-original-evidence-preserved",
+    "viewports": [
+      "320x844",
+      "390x844"
+    ],
+    "observed": "8794 仍显示 规划一个目标 与 记下一件小事 重复入口。",
+    "disposition": "根代理后续修正单一 手动添加任务 入口；最终正式 Web 报告独立验证并收口。此报告不将旧 fixture 的失败改为通过。",
+    "finalEvidenceOwner": "density_review / root formalWeb final report",
+    "acceptance": [
+      "320/390 渲染单一手动入口",
+      "空输入直达任务编辑且无 AI 请求",
+      "输入原文带入编辑器并保留"
+    ]
+  },
+  "finalSourceDifferences": [
+    "history 图标由不存在的 message 改为现有 mail，旧 fixture 未包含。",
+    "recovery 表单验证失败滚动到首错误的最终 handler，旧 fixture 未包含。",
+    "37 手动任务单入口及原文保留修正，旧 fixture 未包含。",
+    "最终新增全局 Web VisualDensity.standard 以支持 48 逻辑像素触控；旧 fixture 未重编，不能据此声称最终所有页面截图或最终全部按钮触控尺寸已验。"
+  ],
+  "densityBoundary": "日历核心日期/重叠/滚动几何与业务逻辑不受该按钮 density 调整；本次 49px 数量入口是旧 fixture 的实测值。最终正式浏览器将对最终源码和相关控件重新验收。",
+  "evidence": [
+    {
+      "file": "polish-ui/12-320-before-after.png",
+      "sha256": "7df2ffddf2f1a10b8632720f58db10847dfdde5b2a0dbebce2e4827f2d0be733",
+      "snapshot": "calendar-comparison-8793-to-8794",
+      "origin": "external verified fixture evidence",
+      "copyVerifiedByteIdentical": true
+    },
+    {
+      "file": "polish-ui/13-320-before-after.png",
+      "sha256": "ac1785cdabedaeab107ffaf1e1bfcf4467d44f2b54a5a349941976c9a86de230",
+      "snapshot": "calendar-comparison-8793-to-8794",
+      "origin": "external verified fixture evidence",
+      "copyVerifiedByteIdentical": true
+    },
+    {
+      "file": "polish-ui/31-390-expanded.png",
+      "sha256": "26061e5962604e415a4b6712f70fb8bb78852a7768d9b93d3779cd1a2ada628f",
+      "snapshot": "fixture-8794",
+      "origin": "external verified fixture evidence",
+      "copyVerifiedByteIdentical": true
+    },
+    {
+      "file": "polish-ui/33-390-expanded.png",
+      "sha256": "f65c69532be9508b3bf69b8f26fef86235a595b0b55816434a1035c8e5dd0a3a",
+      "snapshot": "fixture-8794",
+      "origin": "external verified fixture evidence",
+      "copyVerifiedByteIdentical": true
+    },
+    {
+      "file": "polish-ui/18-430-top.png",
+      "sha256": "ab8c76a0b1413a68e3d7effa357a8b4bc650706a29aa4535b6cdebac4ea2a4a5",
+      "snapshot": "fixture-8793",
+      "origin": "external verified fixture evidence",
+      "copyVerifiedByteIdentical": true
+    },
+    {
+      "file": "polish-ui/13-320-after-horizontal-scroll.png",
+      "sha256": "48ede4bab158d7411fdd0e98a97d7bf713f422427eb62e21c2ae87ae6b9d4f58",
+      "snapshot": "fixture-8794-calendarEdge",
+      "origin": "external verified fixture evidence",
+      "copyVerifiedByteIdentical": true
+    },
+    {
+      "file": "polish-ui/13-320-overlap-selection-list.png",
+      "sha256": "d4afeea57f971bba0cf1c1a3364d9b617fc5e0128391abbb74d110a154a6eb12",
+      "snapshot": "fixture-8794-calendarEdge",
+      "origin": "external verified fixture evidence",
+      "copyVerifiedByteIdentical": true
+    },
+    {
+      "file": "polish-ui/before-18-430-top.png",
+      "sha256": "ab8c76a0b1413a68e3d7effa357a8b4bc650706a29aa4535b6cdebac4ea2a4a5",
+      "snapshot": "previous-v2.0.1-feedback",
+      "origin": "docs/qa/feedback-ui/18-task-detail-430-top.png",
+      "copyVerifiedByteIdentical": true
+    },
+    {
+      "file": "polish-ui/before-31-390-expanded.png",
+      "sha256": "c49c6495d129b734f19e79b8f6f0b5c9bebf8be28793490b42cfd57275fce82a",
+      "snapshot": "previous-v2.0.1-feedback",
+      "origin": "docs/qa/feedback-ui/31-preferences-390-expanded.png",
+      "copyVerifiedByteIdentical": true
+    },
+    {
+      "file": "polish-ui/before-33-390-expanded.png",
+      "sha256": "a718c6c183942859ea107c921b7540c27c295589cca25919e5c0347ec66a9eaf",
+      "snapshot": "previous-v2.0.1-feedback",
+      "origin": "docs/qa/feedback-ui/33-notifications-390-expanded.png",
+      "copyVerifiedByteIdentical": true
+    }
+  ],
+  "safety": {
+    "productSourceModified": false,
+    "browserRerunDuringArchive": false,
+    "flutterDartAdbBuildServiceCommandsRun": false,
+    "user8787TabAccessed": false,
+    "realSmsEmailAiPermissionOrNotificationActionsInvoked": false,
+    "privateUserDataIncluded": false
+  },
+  "limitations": [
+    "仅证明指定 fixture 快照的 Web 布局和交互，不代表生产业务/Android/性能验收。",
+    "最终源码的正式浏览器验收与主交付记录由 root 合并，此文件只保存本轮布局证据。"
+  ]
+}

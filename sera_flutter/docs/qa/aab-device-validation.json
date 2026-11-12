@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "device": "127.0.0.1:16416",
+  "bundletool": "1.18.3",
+  "bundletoolSha256": "a099cfa1543f55593bc2ed16a70a7c67fe54b1747bb7301f37fdfd6d91028e29",
+  "officialGitHubAssetDigestMatched": true,
+  "source": "https://github.com/google/bundletool/releases/tag/1.18.3",
+  "documentation": "https://developer.android.com/tools/bundletool",
+  "privateSigningMaterialPackaged": false,
+  "generateSignedDeviceApks": true,
+  "installDeviceApks": true,
+  "coldLaunchDeviceApks": true,
+  "generatedApkCount": 4,
+  "finalUniversalReleaseApkInstalled": true,
+  "finalReleaseActivityLaunch": true,
+  "temporaryPasswordFilesDeleted": true
+}

@@ -1,0 +1,310 @@
+{
+  "version": "2.0.4+6",
+  "date": "2026-10-31",
+  "status": "validated",
+  "scope": "Conversational assistant, follow-up persistence, save destinations, edit cancellation and browser history",
+  "automated": {
+    "fullFlutterBeforeFinalBrowserHistoryFix": {
+      "passed": 597,
+      "skipped": 1,
+      "failed": 0,
+      "log": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\flutter-release-final.log"
+    },
+    "finalRelevantFlutter": {
+      "passed": 108,
+      "failed": 0,
+      "log": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\browser-existing-edit-widget.log"
+    },
+    "analyzer": {
+      "diagnostics": 0,
+      "log": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\analyze-existing-edit-final.log"
+    },
+    "skipReason": "Optional isolated live Python SQLite API test requires API_INTEGRATION_URL"
+  },
+  "browser": {
+    "conversationAndSave": {
+      "fallback": "Browser plugin not available",
+      "environment": "Production Flutter widgets with deterministic memory repository; no live API",
+      "checks": [
+        {
+          "name": "home submit becomes user and AI messages; single understanding request",
+          "passed": true
+        },
+        {
+          "name": "follow-up preserves chronological replies and actual previous context; no entity before confirmation",
+          "passed": true
+        },
+        {
+          "name": "confirm event -> selected-date calendar; detail only on explicit tap, back returns calendar",
+          "passed": true
+        },
+        {
+          "name": "manual task -> inbox, original input preserved and no AI request",
+          "passed": true
+        },
+        {
+          "name": "responsive chat",
+          "width": 320,
+          "height": 900,
+          "passed": true
+        },
+        {
+          "name": "responsive chat",
+          "width": 430,
+          "height": 900,
+          "passed": true
+        },
+        {
+          "name": "responsive chat",
+          "width": 1280,
+          "height": 900,
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "blocked": [],
+      "savedEntryInitiallyVisible": true,
+      "passed": true
+    },
+    "cancelAndBrowserBack": {
+      "fallback": "Browser plugin not available",
+      "environment": "Production Flutter widgets with deterministic memory repository; no live API",
+      "checks": [
+        {
+          "name": "home submit becomes user and AI messages; single understanding request",
+          "passed": true
+        },
+        {
+          "name": "follow-up preserves chronological replies and actual previous context; no entity before confirmation",
+          "passed": true
+        },
+        {
+          "name": "three cancel/reopen cycles and save do not grow browser history; browser Back returns to home",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "blocked": [],
+      "browserBackURL": "http://127.0.0.1:8796/#/04",
+      "passed": true
+    },
+    "existingEditAndBrowserBack": {
+      "fallback": "Browser plugin not available",
+      "environment": "Production Flutter widgets with deterministic memory repository; no live API",
+      "checks": [
+        {
+          "name": "home submit becomes user and AI messages; single understanding request",
+          "passed": true
+        },
+        {
+          "name": "follow-up preserves chronological replies and actual previous context; no entity before confirmation",
+          "passed": true
+        },
+        {
+          "name": "three existing-event edit/save cycles keep browser history stable; browser Back returns directly to calendar",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "blocked": [],
+      "savedEntryInitiallyVisible": true,
+      "editHistoryBefore": 4,
+      "editHistoryAfter": 4,
+      "passed": true
+    },
+    "servedProductionSmoke": {
+      "browserFallbackReason": "Browser plugin not available",
+      "base": "http://127.0.0.1:8787",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+      ],
+      "httpErrors": [
+        {
+          "status": 401,
+          "path": "/api/v1/auth/me"
+        }
+      ],
+      "blocked": [],
+      "checks": [
+        {
+          "name": "real served release, desktop login, meaningful content, no offline overlay",
+          "passed": true,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "name": "email login -> phone login renders actual form without submitting credentials or SMS",
+          "passed": true,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        }
+      ],
+      "version": {
+        "app_name": "sera_flutter",
+        "version": "2.0.4",
+        "build_number": "6",
+        "package_name": "sera_flutter"
+      },
+      "servedJsSha256": "0892140f30d317389fa8b5ad761f6f5d22ee52ae4455f78865e9e0175c9c9757",
+      "expectedSignedOutResponses": [
+        {
+          "status": 401,
+          "path": "/api/v1/auth/me"
+        }
+      ],
+      "unexpectedConsoleErrors": [],
+      "passed": true
+    }
+  },
+  "android": {
+    "package": "com.sera.sera_flutter",
+    "versionName": "2.0.4",
+    "versionCode": 6,
+    "certificateSha256": "1dfa3ec18d9e33d30a3dedbbe082f3ccba56c423581bcb8bee24b5b8d02df733",
+    "sameCertificateAsPriorRelease": true,
+    "apkApksignerVerified": true,
+    "aabJarsignerVerified": true,
+    "aabBundletoolValidated": true,
+    "aabWarningsRetained": [
+      "Existing self-signed certificate and untrusted certificate chain",
+      "No signing timestamp",
+      "POSIX metadata not signed",
+      "JarFile/JarInputStream manifest-order warning; jarsigner reports jar verified"
+    ],
+    "aabSignatureLog": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\aab-signature-final-en.log",
+    "backendBaseUrl": "http://127.0.0.1:8787",
+    "physicalDeviceRunInThisPass": false
+  },
+  "artifacts": {
+    "apk": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-2.0.4+6-20261031.apk",
+      "bytes": 77051244,
+      "sha256": "8323e4f394e53dcbb66104ef5a169cf6f3ba1c5500665af825eaa35c608f1c1a"
+    },
+    "aab": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\SERA-2.0.4+6-20261031.aab",
+      "bytes": 74276888,
+      "sha256": "f71ee6b36a2976dbbc1f007da55aed684a7c1da7d79c83f41f026c643a734269"
+    },
+    "webJavaScript": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\web\\main.dart.js",
+      "bytes": 5512671,
+      "sha256": "0892140f30d317389fa8b5ad761f6f5d22ee52ae4455f78865e9e0175c9c9757"
+    },
+    "webCacheManifest": {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\build\\web\\sera-cache-manifest.json",
+      "bytes": 11644,
+      "sha256": "ba5137a1e98f29bbdab7cb762dd699425ed58a88f7bac89e184bb8ec633760ff"
+    }
+  },
+  "finalSourceHashes": [
+    {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\lib\\ui\\screens\\planning_screens.dart",
+      "bytes": 147530,
+      "sha256": "3ac9f8dc5bc73d677e3355e61fc762f57d48a6809c62853decfcada845de388b"
+    },
+    {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\lib\\ui\\screens\\task_screens.dart",
+      "bytes": 137670,
+      "sha256": "a5ef303a6290652ae7f9100e84d0da70597ab0ee67ff40601dc222db33d5d094"
+    },
+    {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\lib\\ui\\screens\\main_screens.dart",
+      "bytes": 61477,
+      "sha256": "10ead4597ea2b8a7b60f4398557ac18ff5fe9057d6a0c522ac6d1785a61d210d"
+    },
+    {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\lib\\ui\\core\\sera_widgets.dart",
+      "bytes": 32529,
+      "sha256": "4ea5c0b65ea14b532590a68e00ad54756fb5d739c4d4215b2999b23eb45ae3e9"
+    },
+    {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\lib\\ui\\core\\sera_scroll_reveal.dart",
+      "bytes": 1398,
+      "sha256": "ae4021359100652d6e938250c4f3b287763713f1590c9129b1b0986c067c06fc"
+    },
+    {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\lib\\domain\\session_models.dart",
+      "bytes": 12401,
+      "sha256": "94cea604280b27cf95be4ebdba32982bbd02b1a29b739a826d9c7caf02f33423"
+    },
+    {
+      "path": "D:\\program_II\\SERA-Mobile-UI-v1.0\\sera_flutter\\lib\\application\\sera_controller.dart",
+      "bytes": 46869,
+      "sha256": "229442978f1b3085291f75d68413e06ea0f3213c416a0280dd9537b4e6a25fbe"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\01-chat-initial.png",
+      "bytes": 55996,
+      "sha256": "62d5037f38ba5660f433430c0822cdf3c0a605c7d1b0821b5110cae048f0683e"
+    },
+    {
+      "path": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\02-chat-followup.png",
+      "bytes": 89162,
+      "sha256": "ebc5e7df3ef1f904a9c98077ff51788e734908e8b6fc1f9d2062bf71fc515a32"
+    },
+    {
+      "path": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\03-event-review.png",
+      "bytes": 95102,
+      "sha256": "80648072102c02489b8238b9363feb4b0495e4370a42b34c901905672e34b2e2"
+    },
+    {
+      "path": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\04-event-saved-calendar.png",
+      "bytes": 38873,
+      "sha256": "06f335a3081e4f2d42ef5e41642f72db007b147281ee12e7158f381e503b23ce"
+    },
+    {
+      "path": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\05-task-saved-inbox.png",
+      "bytes": 49493,
+      "sha256": "f49c46f7ef592bc1dec94a3a8b05ba0af7990aa8e90a2740873cf83c488326d5"
+    },
+    {
+      "path": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\chat-width-320.png",
+      "bytes": 56420,
+      "sha256": "2e73d325e9b191891204900736e90f4f77db7aed781eb9b0418e5e53cfd827b7"
+    },
+    {
+      "path": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\chat-width-430.png",
+      "bytes": 56441,
+      "sha256": "a979dc1d89248c825a2c72c4a4cc2f99ce734405edc93f8d46433d70dc2dc6f1"
+    },
+    {
+      "path": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\chat-width-1280.png",
+      "bytes": 70020,
+      "sha256": "93ad08a89a576bc6102e90a5470f1aa6398dacd5a4e824f334f5b229286c488e"
+    }
+  ],
+  "rollbackWeb": "C:\\Users\\rytram\\.codex\\visualizations\\2026\\10\\31\\sera-followup-20261031\\previous-web",
+  "coordinatedBackendReload": {
+    "reportedByThread": "01a18ff4-057d-73e3-9b51-007af4fa93c7",
+    "freshBackupFile": "before-runtime-reload.sqlite3",
+    "existingDatabaseAndRuntimeConfigurationPreserved": true,
+    "publicLookupConfigurationLoaded": true,
+    "reportedStableTablesPreserved": 16,
+    "reportedIntegrityAndForeignKeyChecks": "passed",
+    "reportedBackendRegression": {
+      "passed": 310,
+      "failed": 0
+    },
+    "independentlyCheckedHealthReady": {
+      "httpStatus": 200,
+      "status": "ready",
+      "schemaVersion": 2
+    },
+    "productionWebSmokeRerunAfterReload": true
+  },
+  "limits": [
+    "Browser conversation/save/back tests use production Flutter widgets and an isolated deterministic memory repository; no live AI or backend.",
+    "Production browser smoke checks signed-out rendering and actual served assets only; no credentials or SMS submitted.",
+    "Parallel AI semantic/backend work has its own acceptance records; model and long-term planning quality are not inferred from this UI suite.",
+    "Late parallel model acceptance found a public-lookup grounding failure: a date from a search snippet was labelled verified although the fetched source did not support that date. Public lookup accuracy is not accepted as stable; production code and release binaries remain frozen.",
+    "No new physical Android device run, microphone/native permission check or performance measurement in this pass.",
+    "Prior 2.0.3+5 all-page screenshot/source archives remain historical artifacts; no old archive relabelled as 2.0.4+6."
+  ]
+}

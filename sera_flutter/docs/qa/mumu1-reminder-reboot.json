@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "experiment": "mumu1-scheduled-notification-reboot",
+  "recordedAt": "2026-10-30T19:25:07.396362+00:00",
+  "device": "127.0.0.1:16416",
+  "status": "passed_host_experiment",
+  "normalScheduledNotificationObserved": true,
+  "rebootScheduledNotificationObserved": true,
+  "persistedToDiskVerifiedBeforeReboot": true,
+  "kernelBootIdChanged": true,
+  "appActivityLaunchedAfterReboot": false,
+  "manualBootBroadcastSent": false,
+  "flutterResultClassification": "not_a_flutter_test_pass",
+  "cleanup": {
+    "testAppDataCleared": true,
+    "temporaryForwardRemoved": false,
+    "temporaryForwardAbsent": true,
+    "temporaryForwardNote": "ADB forwarding was removed by the genuine reboot; subsequent adb forward --list confirmed tcp:18799 absent."
+  },
+  "qaRunId": "1793388316496",
+  "exactScheduling": true,
+  "normalObservedElapsedSeconds": 5.34,
+  "rebootFireAtEpochMs": 1793388377130,
+  "rebootRequested": true,
+  "bootCompletedElapsedSeconds": 20.11,
+  "rebootObservedElapsedSeconds": 59.89,
+  "bootRecoveryEvidence": "Kernel reboot changed boot ID, no activity relaunch/manual broadcast, and unique persisted alarm notification appeared after boot.",
+  "experimentElapsedSeconds": 59.89,
+  "flutterExitCodeAfterRebootDisconnect": 0
+}

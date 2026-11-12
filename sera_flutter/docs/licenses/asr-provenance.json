@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-31",
+  "model": "sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16",
+  "archiveUrl": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16.tar.bz2",
+  "archiveSha256": "2b7c63322b32e5e0f2526043a1103366119ca58dd615cd7105a37c01db9553d7",
+  "officialConversionDocumentation": "https://k2-fsa.github.io/sherpa/onnx/pretrained_models/online-transducer/zipformer-transducer-models.html#sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16-bilingual-chinese-english",
+  "sourceModel": "csukuangfj/k2fsa-zipformer-bilingual-zh-en-t",
+  "sourceModelCardUrl": "https://huggingface.co/csukuangfj/k2fsa-zipformer-bilingual-zh-en-t/resolve/main/README.md",
+  "sourceModelCommit": "e2382758de9a0219b4efe682b95af30b399db3b8",
+  "sourceModelCardSha256": "037edf8e561cff512493746532af04f5c40cb6fbc55d3e360a399215b6b0b915",
+  "sourceModelDeclaredLicense": "apache-2.0",
+  "originalSourceNamedInCard": "https://huggingface.co/pfluo/k2fsa-zipformer-chinese-english-mixed",
+  "runtime": "sherpa-onnx 2.0.1",
+  "runtimeLicense": "Apache-2.0",
+  "modifications": "SERA does not train, requantize or edit weights. The official quantized combination (int8 encoder, float decoder, int8 joiner) and tokens are copied unchanged; manifest is added.",
+  "runtimeFiles": [
+    "encoder-epoch-99-avg-1.int8.onnx",
+    "decoder-epoch-99-avg-1.onnx",
+    "joiner-epoch-99-avg-1.int8.onnx",
+    "tokens.txt"
+  ]
+}

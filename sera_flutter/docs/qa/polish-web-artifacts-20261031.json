@@ -1,0 +1,9 @@
+{
+  "version": "2.0.2+4",
+  "mainDartJsSha256": "2b0d7d615a44285319b45b75729f4bb0d0e510402c69c85015cfb3aae42b458b",
+  "servedMainDartJsSha256": "2b0d7d615a44285319b45b75729f4bb0d0e510402c69c85015cfb3aae42b458b",
+  "manifestVersion": "9033b9514a4b170b8ff8fe3b4090e677ab9ab060a55046c53efa8058a31ccacc",
+  "resourcesChecked": 86,
+  "resourceMismatches": [],
+  "status": "passed"
+}

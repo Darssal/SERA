@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-30T19:51:52.515Z",
+  "status": "passed_real_browser_offline_reopen",
+  "baseUrl": "http://127.0.0.1:8788",
+  "buildMainSha256": "d75a6c2971b1b0fb2104b8fb7aad0e8a141d74ec48b0158eb256aa304694854f",
+  "servedBundleShaVerified": true,
+  "manifestVersion": "a3c289eff9f12f9e4831238a6109b9c241cc7e124477477efbdbf38f757dded9",
+  "manifestResources": 86,
+  "manifestTotalBytes": 41543788,
+  "browser": {
+    "name": "Chrome",
+    "version": "156.0.8078.74",
+    "headful": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "independentTemporaryProfile": true,
+    "independentSyntheticQaAccount": true
+  },
+  "checks": {
+    "fullCacheReadyBeforeOffline": {
+      "ready": true,
+      "resources": 86,
+      "bootstrap": true,
+      "main": true,
+      "canvasWasm": true,
+      "chineseFont": true,
+      "refreshIcon": true
+    },
+    "realContextNetworkDisabled": true,
+    "offlinePageReloadRendered": true,
+    "allAppPagesClosedThenOfflineNewPageRendered": true,
+    "startupLoadingElementRemoved": true,
+    "chineseFontAndSvgRendered": true,
+    "offlineStatusBannerVisible": true,
+    "screenshotsVisuallyReviewed": true,
+    "noUnhandledPageErrors": true
+  },
+  "networkErrorAssessment": "ERR_INTERNET_DISCONNECTED expected only for deliberately unavailable API/network; core runtime, Chinese font and icons rendered from complete local cache.",
+  "fix": {
+    "rootCause": "First-visit Flutter runtime loaded before old Worker controlled the page, while install cached only five shell files.",
+    "behavior": "Post-build hashed static resource manifest; startup waits for a complete verified shell; new cache pointer commits atomically; failures retain complete old versions and show bounded retry guidance; live tabs retain their version until navigation."
+  },
+  "screenshots": [
+    "sera-taskui-offline-reload-1793389888965.png",
+    "sera-taskui-offline-cold-1793389888965.png"
+  ],
+  "screenshotStorage": "TEMP outside source bundle",
+  "automatedVerification": {
+    "nodePassed": 32,
+    "pythonManifestPassed": 3,
+    "coverage": [
+      "first controlled request uses complete cache",
+      "bootstrap/main/wasm/font/SVG available offline",
+      "network/hash/quota failed update preserves old complete shell",
+      "old live-client cache retained until safe cleanup",
+      "incomplete cold cache never advertised ready",
+      "manifest deterministic and all assets hashed",
+      "remote CDN and incomplete build rejected"
+    ]
+  },
+  "scope": "真实离线运行壳重开；业务层离线任务CRUD、pending队列与恢复上传由独立业务QA记录负责。"
+}
