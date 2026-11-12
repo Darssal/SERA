@@ -1,8 +1,10 @@
 # SERA 语音驱动的智能任务规划与时间管理系统
 
-SERA 将语音或文字表达转换为可编辑的任务规划，结合工作日、任务依赖、每日预算和已有日程计算安排，用户确认后保存并执行。Android 与 Web 共享 Flutter 界面和业务实现，FastAPI 提供账户、同步、社区与管理接口。
+SERA 支持用一句语音完成任务与日程录入：AI 将口语整理为清晰的标题、说明和时间信息，系统生成可核对的安排，确认后保存日程并按提醒规则通知。用户无需逐项填写日期、起止时间和用时。任务规划还结合工作日、依赖、每日预算和已有日程计算安排，Android 与 Web 共享 Flutter 实现。
 
 <p align="center"><img src="project-docs/images/sera-poster.png" alt="SERA 使用海报：说出安排、查看计划、开始执行" width="650"></p>
+
+[完整案例：从一句语音到带提醒的日程](project-docs/voice-to-schedule/README.md)
 
 ## 主要功能
 

@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-12",
+  "version": "2.2.1+33",
+  "input": "帮我把明天下午三点到四点安排为项目汇报准备。先整理系统架构图，再检查主要功能，最后排练讲解。",
+  "audioSource": "Microsoft Huihui Desktop synthetic audio into Chromium microphone capture",
+  "browser": "Chrome via Playwright",
+  "viewport": {
+    "width": 430,
+    "height": 900
+  },
+  "transcript": "帮我把明天下午三点到四点安排为项目汇报准备先整理系统架构图再检查主要功能最后排练讲解",
+  "understanding": {
+    "intent": "task",
+    "title": "项目汇报准备",
+    "summary": "明天（2026-11-13）下午15:00-16:00进行项目汇报准备：先整理系统架构图，再检查主要功能，最后排练讲解。",
+    "outcome": "完成系统架构图整理、主要功能检查和讲解排练",
+    "deadline": null,
+    "start": "2026-11-13T15:00:00+08:00",
+    "end": "2026-11-13T16:00:00+08:00",
+    "deadlineIsDateOnly": false,
+    "dailyBudget": 90,
+    "estimatedMinutes": 60,
+    "questions": [],
+    "source": "siliconflow",
+    "model": "zai-org/GLM-5.3-Flash"
+  },
+  "schedule": {
+    "date": "2026-11-13",
+    "start": "15:00",
+    "end": "16:00",
+    "minutes": 60,
+    "timeZone": "Asia/Hong_Kong"
+  },
+  "reminder": {
+    "leadMinutes": 10,
+    "scheduledAt": "2026-11-13T14:50:00+08:00"
+  },
+  "notificationTest": {
+    "method": "Playwright controlled browser clock advanced through 2026-11-13 14:50 Asia/Hong_Kong",
+    "title": "项目汇报准备",
+    "body": "计划 15:00 开始，给重要的事留一点时间。",
+    "passed": true
+  },
+  "pageErrors": []
+}
